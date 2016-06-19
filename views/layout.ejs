@@ -13,208 +13,30 @@
 </head>
 
   <body>
-    <div class="row">
-      <div class="col s8 center" >
-        <div class="center z-depth-2" style="border: 1px solid black; margin-top: 1.5em; margin-left: 7em;">
-          <p>
-            <h5>
-              Proyecto terminales<br>
-              Departamento de Ciencias Básicas e Ingenieria
-            </h5>
-          </p>
-        </div>
-      </div>
-      <div class="col s4 m2 center">
-        <div class="center" style=" margin-top: 1.5em; margin-left: 3em; ">
-          <img  src="/images/logoUcaribe.png" class="z-depth-2" style=" width:13em">
-        </div>
-      </div>
-    </div>
-
-    <nav  role="navigation" style=" background-color: rgb(38, 107, 156);">
-      <div class="nav-wrapper container">
-        <ul class="hide-on-med-and-down ">
-          <li >
-              <a href="" >Inicio</a>
-              <a href="">Catalogo</a>
-              <a href="">Busqueda</a>
-              <a href="">Proyectos en puerta</a>
-          </li>
-        </ul>
-
-
-        <ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
-          <li><a href="#">Navbar Link</a></li>
-        </ul>
-        <a href="http://materializecss.com/templates/starter-template/preview.html#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-      </div>
-    </nav>
-
-
+    <%- partial ('header.ejs') %>
 
     <div class="row">
-          <div class="col s3" style="border-right: solid; border-right: thick double rgb(38, 107, 156); margin-top:70px; ">
-            <!-- Grey navigation panel -->
-            <div class="section no-pad-bot" id="index-banner">
-              <div class="container">
-                <div class="row center">
 
-                  <div style="border: 1px solid black; container">
-                      <!--table>
-                          <tr><th>Iniciar Sesión</th></tr>
-                          <tr>
-                              <td> Usuario:</td>
-                              <td><input class="" type="text-lighten-3" name="name" value="">
-                          </tr>
-                          <tr>
-                            <td>
-                              Contraseña:
-                            </td>
-                            <td>
-                                <input type="text-lighten-5" name="name" value="">
-                            </td>
-                          </tr>
-                      </table-->
-              <!--div class="row">
-                <form class="col s12">
-                  <div class="row">
-                    <div class="input-field col s6">
-                      <i class="material-icons prefix">account_circle</i>
-                      <input id="icon_prefix" type="text" class="validate">
-                      <label for="icon_prefix">First Name</label>
-                    </div>
-                  </div>
-
-                  <div class="row">  <div class="input-field col s6">
-                      <i class="material-icons prefix">phone</i>
-                      <input id="icon_telephone" type="tel" class="validate">
-                      <label for="icon_telephone">Telephone</label>
-                    </div>
-                  </div>
-                </form>
-              </div-->
-            </div>
-                </div>
-
-                <div class="row center">
-                  <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
-                </div>
-                <br><br>
-
-
-                <div class="card">
-                 <!--div class="card-image waves-effect waves-block waves-light">
-
-               </div-->
-                 <div class="card-content">
-                   <span class="card-title activator grey-text text-darken-4">First Name</span>
-                   <input id="icon_telephone" type="tel" class="validate">
-
-                   <span class="card-title activator grey-text text-darken-4">Phone</span>
-                   <input id="icon_telephone" type="tel" class="validate">
-
-                   <p><a href="#">This is a link</a></p>
-                 </div>
-                 <!--div class="card-reveal">
-                   <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                   <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                 </div-->
-                </div>
-
-                <div class="row center">
-                  <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light blue">Get Started</a>
-                </div>
-
-              </div>
-            </div>
-
+      <div class="col s3" style="border-right: 5px solid rgb(38, 107, 156); margin-top:70px; ">
+        <div class="section no-pad-bot" id="index-banner">
+          <div class="container">
+            <%- partial ('layout-left.ejs') %>
           </div>
+        </div>
+      </div>
 
-          <div class="col s9">
-            <!-- Teal page content  -->
-            <div class="section no-pad-bot" id="index-banner">
-              <div class="container">
-                <%- body %>
-
-              </div>
-            </div>
-
-
+      <div class="col s9">
+          <div class="section no-pad-bot" id="index-banner">
             <div class="container">
-              <div class="section">
-
-                <!--   Icon Section   -->
-                <div class="row">
-                  <div class="col s12 m4">
-                    <div class="icon-block">
-                      <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-                      <h5 class="center">Speeds up development</h5>
-
-                      <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-                    </div>
-                  </div>
-
-                  <div class="col s12 m4">
-                    <div class="icon-block">
-                      <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-                      <h5 class="center">User Experience Focused</h5>
-
-                      <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-                    </div>
-                  </div>
-
-                  <div class="col s12 m4">
-                    <div class="icon-block">
-                      <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-                      <h5 class="center">Easy to work with</h5>
-
-                      <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              <br><br>
+              <%- body %>
 
             </div>
           </div>
-
-    </div>
-
-
-
-    <footer class="page-footer" style=" background-color: rgb(38, 107, 156);">
-      <div class="container">
-        <div class="row center">
-          <div class="col l4 s12">
-            <h5 class="white-text">Mapa del Sitio</h5>
-            <!--p class="grey-text text-lighten-4">.</p-->
-          </div>
-
-          <div class="col l4 s12">
-            <h5 class="white-text">Contactanos</h5>
-          </div>
-          <div class="col l4 s12">
-            <a  href="https://www.unicaribe.edu.mx"><h5 class="white-text"> Portal Unicaribe</h5></a>
-            <!--ul>
-              <li><a class="white-text" href="http://materializecss.com/templates/starter-template/preview.html#!">Link 1</a></li>
-              <li><a class="white-text" href="http://materializecss.com/templates/starter-template/preview.html#!">Link 2</a></li>
-              <li><a class="white-text" href="http://materializecss.com/templates/starter-template/preview.html#!">Link 3</a></li>
-              <li><a class="white-text" href="http://materializecss.com/templates/starter-template/preview.html#!">Link 4</a></li>
-            </ul-->
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-copyright">
-        <div class="container center">
-        Create by <a class="orange-text text-lighten-3" href="">Unicaribe 2016</a>
         </div>
       </div>
 
 
-    </footer>
-
+    <%- partial ('footer.ejs') %>
 
 
     <!--  Scripts-->
@@ -226,4 +48,5 @@
 
   <div class="hiddendiv common"></div><div class="drag-target" style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); left: 0px;">
   </div>
-  </body></html>
+  </body>
+  </html>
