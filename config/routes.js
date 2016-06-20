@@ -55,6 +55,14 @@ module.exports.routes = {
   '/es': {
     controller: 'AppController',
     action: 'changeEs'
+  },
+  '/proye':{
+    view:'proye'
+  },
+  '/proyuni':{
+    view:'proyuni'
+  },'/proyext':{
+    view:'proyext'
   }
   //'/main': {
   //  view: 'main'

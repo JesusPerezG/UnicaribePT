@@ -15,7 +15,6 @@
     <%- body %>
 
 
-
     <!--script src="/js/dependencies/sails.io.js"></script>
     <link rel="stylesheet" href="/assets/materialize/js/materialize.min.js">
     <link rel="stylesheet" href="/assets/materialize/js/jquery-3.0.0.min.js"-->
