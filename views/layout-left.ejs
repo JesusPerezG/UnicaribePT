@@ -1,47 +1,48 @@
 
-<link href="/materialize/template/icon.css" rel="stylesheet">
 
 <div class="card">
  <!--div class="card-image waves-effect waves-block waves-light">
 
 </div-->
  <div class="card-content">
-   <span class="card-title activator grey-text text-darken-4">User</span>
+   <!--form class="" action="/login" method="post"-->
+     <span class=" grey-text text-darken-4"><%= __('user') %></span>
+     <input id="icon_telephone" type="tel" class="validate">
 
-   <input id="icon_telephone" type="tel" class="validate">
+     <span class=" activator grey-text text-darken-4"><%= __('pass') %></span>
+     <input id="icon_telephone" type="tel" class="validate">
+  <!--/form-->
+   <p>
+      <a class="modal-trigger" href="#modal1" ><%= __('create') %></a>
+      <a class="right" href=""><%= __('sigin') %></a>
+    </p>
 
-   <span class="card-title activator grey-text text-darken-4">Password</span>
-   <input id="icon_telephone" type="tel" class="validate">
-   <a class="waves-effect waves-light btn modal-trigger" href="#modal1"><%= __('create') %></a>
-   <!--p><a href="#">Create acount</a></p-->
  </div>
- <!--div class="card-reveal">
-   <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-   <p>Here is some more information about this product that is only revealed once clicked on.</p>
- </div-->
 </div>
-
-<div class="row center">
-  <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light blue">Get Started</a>
-</div>
-
-<div class="card-content">
-
-  Date: <div id="datepicker"></div>
-</div>
+<br><br>
 
 
-<!-- Modal Trigger -->
+<div id="datepicker"></div>
 
-<!-- Modal Structure -->
+
 <div id="modal1" class="modal">
-  <div class="modal-content">
-    <h4>Modal Header</h4>
-    <p>A bunch of text</p>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-  </div>
+  <form class="" action="/login" method="post">
+    <div class="modal-content">
+      <h5><%= __('create-account') %></h5>
+        <span class="card-title activator grey-text text-darken-4"><%= __('user') %></span>
+        <input name="user" type="text" class="validate" required="true">
+
+        <span class="card-title activator grey-text text-darken-4"><%= __('pass') %></span>
+        <input name="pass" type="password" class="validate" required="true">
+
+        <span class="card-title activator grey-text text-darken-4"><%= __('cn-pass') %></span>
+        <input name="pass" type="password" class="validate" required="true">
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat"><%= __('cancel') %></a>
+      <button class=" modal-action waves-effect waves-green btn-flat" type="submit" name="button"><%= __('save') %></button>
+    </div>
+   </form>
 </div>
 
 <!--div class="container">

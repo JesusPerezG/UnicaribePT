@@ -1,0 +1,35 @@
+
+<h4 class=" light center header">Edit Proyect</h4>
+
+<div class="card ">
+  <form class="" action="/login" method="post">
+    <div class="card-content">
+            <span class="activator grey-text text-darken-4"><%= __('tittle-proyect') %></span>
+            <input name="title" type="text" class="validate" required="true">
+
+            <span class="activator grey-text text-darken-4"><%= __('asesor') %></span>
+            <input name="asesor" type="text" class="validate" required="true">
+
+            <span class="activator grey-text text-darken-4"><%= __('author-1') %></span>
+            <input name="author1" type="text" class="validate" required="true">
+
+            <span class="activator grey-text text-darken-4"><%= __('author-2') %></span>
+            <input name="author2" type="text" class="validate" required="true">
+
+            <span class="activator grey-text text-darken-4"><%= __('author-3') %></span>
+            <input name="author3" type="text" class="validate" required="true">
+
+            <span class="activator grey-text text-darken-4"><%= __('descrip-proyect') %></span>
+            <input name="description" type="text" class="validate" required="true">
+
+            <p>
+               <a class="modal-trigger" href="#modal1" ><%= __('create') %></a>
+               <a class="right" href=""><%= __('sigin') %></a>
+             </p>
+     </div>
+     <!--div class="card-action">
+        <a href="#">Edit</a>
+        <a href="#" class="right" >Delete</a>
+      </div-->
+  </form>
+</div>

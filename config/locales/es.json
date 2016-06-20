@@ -1,7 +1,30 @@
 {
   "Welcome": "Bienvenido",
   "A brand new app.": "Una nueva aplicación.",
+  "headerTitle1": " Proyectos terminales",
+  "headerTitle2": " Departamento de Ciencias Básicas e Ingenierías",
   "create": "Crear",
+  "create-account":"Crear Cuenta",
   "es": "Español",
-  "en": "English"
+  "en": "English",
+  "sigin": "Ingresar",
+  "user": "Usuario",
+  "pass": "Contraseña",
+  "cn-pass":"Confirmar Contraseña",
+  "start": "Inicio",
+  "cat": "Catalogo",
+  "search": "Busqueda",
+  "proy-upcoming": "Proyectos en puerta",
+  "lang": "Idioma",
+  "cancel": "Cancel",
+  "save": "Save",
+  "index.label":  "En el año 2018 la Universidad del Caribe es una institución de educación superior con programas y servicios que atienden con pertinencia las tendencias y necesidades del entorno local, con una integración e inserción nacional e internacional. Focaliza el desarrollo de sus funciones sustantivas en las áreas estratégicas prioritarias: Turismo; Sustentabilidad y Medio Ambiente; Tecnología y Sistemas, Innovación y Negocios; Desarrollo Humano y Gestión Pública-Social, como compromiso y responsabilidad para el impulsar el desarrollo económico y social de Quintana Roo y México." ,
+  "create-proyect": "Crear Proyecto",
+  "tittle-proyect": "Titulo: ",
+  "asesor": "Asesor:",
+  "autor-1": "Autor 1:",
+  "autor-2": "Autor 2:",
+  "autor-3": "Autor 3:",
+  "descrip-proyect": "Descripción del proyecto:"
+  
 }

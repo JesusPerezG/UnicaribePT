@@ -1,7 +1,31 @@
 {
 	"Welcome": "Welcome",
 	"A brand new app.": "A brand new app.",
+	"headerTitle1": " Terminal Project",
+  "headerTitle2": " Department of Basic Sciences and Engineering",
 	"create": "Create",
+	"create-account":"Create Account",
 	"es": "Español",
-  "en": "English"
+  "en": "English",
+	"sigin": "Sigin",
+	"user": "User",
+	"pass": "Password",
+	"cn-pass":"Confirm Password",
+	"start": "Introduction",
+	"cat": "Catalog",
+	"search": "Search",
+	"proy-upcoming": "Upcoming Proyects",
+	"lang": "Idioma",
+	"cancel": "Cancelar",
+  "save": "Guardar",
+	"index.label":  "En el año 2018 la Universidad del Caribe es una institución de educación superior con programas y servicios que atienden con pertinencia las tendencias y necesidades del entorno local, con una integración e inserción nacional e internacional. Focaliza el desarrollo de sus funciones sustantivas en las áreas estratégicas prioritarias: Turismo; Sustentabilidad y Medio Ambiente; Tecnología y Sistemas, Innovación y Negocios; Desarrollo Humano y Gestión Pública-Social, como compromiso y responsabilidad para el impulsar el desarrollo económico y social de Quintana Roo y México." ,
+	"create-proyect": "Create Proyect",
+  "tittle-proyect": "Title: ",
+  "asesor": "Asesor:",
+  "author-1": "Author 1:",
+  "author-2": "Author 2:",
+  "author-3": "Author 3:",
+  "descrip-proyect": "Descripción del proyecto:"
+
+
 }

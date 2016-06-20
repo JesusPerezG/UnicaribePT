@@ -25,7 +25,11 @@ module.exports.policies = {
   * access)                                                                  *
   *                                                                          *
   ***************************************************************************/
-   //'*' : 'localize'
+  PrivateController: {
+     // Apply 'isAdmin' to the 'foo' action.  'isLoggedIn' will NOT be applied!
+     '*': 'sessionAuth'
+ }
+   //'/admin/*' : 'sessionAuth'
 
   // '*': true,
 

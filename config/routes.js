@@ -56,17 +56,39 @@ module.exports.routes = {
     controller: 'AppController',
     action: 'changeEs'
   },
+  'login': {
+    controller: 'AppController',
+    action: 'login'
+  },
+  'logout': {
+    controller: 'AppController',
+    action: 'logout'
+  },
+
+  // Admin
+  '/admin/proyects/create': {
+    view: 'private/proyects/create'
+  },
+  '/admin/proyects/list': {
+    view: 'private/proyects/list'
+  },
+  '/admin/proyects/edit': {
+    view: 'private/proyects/edit'
+  }, // Inicio
+
   '/proye':{
-    view:'proye'
+    view:'inicio/proye'
   },
   '/proyuni':{
-    view:'proyuni'
-  },'/proyext':{
-    view:'proyext'
+    view:'inicio/proyuni'
+  },
+  '/proyext':{
+    view:'inicio/proyext'
+  },
+  '/catalogo':{
+    view:'inicio/catalogo'
   }
-  //'/main': {
-  //  view: 'main'
-  //}
+
 
   /***************************************************************************
   *                                                                          *

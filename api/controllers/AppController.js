@@ -12,6 +12,15 @@ module.exports = {
   changeEs: function(req,res){
     res.setLocale('es');
     res.view('index');
-	}
+	},
 
+  login: function(req,res){
+    res.setLocale('es');
+    res.view('index');
+  },
+
+  logout: function(req,res){
+    res.setLocale('es');
+    res.view('index');
+	},
 };

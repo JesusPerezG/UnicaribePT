@@ -1,30 +1,33 @@
 
-<div class=" row">
+<div class=" row" >
 
   <div class="col s8 center " >
-
     <div class="center z-depth-2 card-content" style="margin-top: 1.5em; margin-left: 7em;">
-
       <div class="card">
-        <blockquote style="border-left: 5px solid #6E94EE;">
-          <p><br>
-          <h5>
-            Proyecto terminales<br>
-            Departamento de Ciencias Básicas e Ingenieria
-          </h5>
-        </p><br>
+        <blockquote style="border-left: 5px solid rgb(38, 107, 156);">
+          <p><br><h5> <%= __('headerTitle1') %> <br> <%= __('headerTitle2') %> </h5></p><br>
         </blockquote>
-
       </div>
-
     </div>
   </div>
 
-  <div class="col s4 m2 center">
-    <div class="center" style=" margin-top: 1.5em; margin-left: 3em; ">
+
+    <div class="col s2 center  card-content" style="margin-top: 1.3em; margin-left: 4em; ">
+          <img class="z-depth-2" src="/images/logoUcaribe.png" style="width: 20em; border-left: 5px solid rgb(38, 107, 156);">
+    </div>
+
+
+
+    <!--div class="center" style="border-left: 5px solid rgb(38, 107, 156); margin-top: 1.5em; margin-left: 3em; ">
       <img  src="/images/logoUcaribe.png" class="z-depth-2" style=" width:13em">
-    </div>
+    </div-->
   </div>
+
+
+    <!--div class="center" style="border-left: 5px solid rgb(38, 107, 156); margin-top: 1.5em; margin-left: 3em; ">
+      <img  src="/images/logoUcaribe.png" class="z-depth-2" style=" width:13em">
+    </div-->
+
 
 </div>
 
@@ -32,21 +35,13 @@
   <div class="nav-wrapper container">
     <ul class="hide-on-med-and-down ">
       <li >
-          <a href="" >Inicio</a>
+          <a href="" ><%= __('start') %></a>
       </li>
-      <li><a href="">Catalogo</a></li>
-      <li><a href="">Busqueda</a></li>
-      <li><a href="/proye">Proyectos en puerta</a></li>
+      <li><a href="/catalogo"><%= __('cat') %></a></li>
+      <li><a href="/"><%= __('search') %></a></li>
+      <li><a href="/proye"><%= __('proy-upcoming') %></a></li>
       <!-- Dropdown Trigger -->
-      <li class="right col s4" ><a class="dropdown-button " href="#!" data-activates="dropdown1">Lenguaje<i class="material-icons right">arrow_drop_down</i></a></li>
-
-          <!--ul>
-             <li>
-                 <%= __('es') %>
-                <a href=""><img src="/images/es.png" alt="" />
-                </a>
-             </li>
-          </ul-->
+      <li class="right col s4" ><a class="dropdown-button " href="#!" data-activates="dropdown1"><%= __('lang') %><i class="material-icons right">arrow_drop_down</i></a></li>
       </li>
     </ul>
 

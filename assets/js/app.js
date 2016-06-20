@@ -2,7 +2,7 @@
   $(function() {
     $( "#datepicker" ).datepicker();
 
-    $("#lang-es").click(function (){        
+    $("#lang-es").click(function (){
         req.setLocale('es');
     });
 
@@ -11,5 +11,6 @@
     });
 
     $(".dropdown-button").dropdown();
-
+    
+    $('.modal-trigger').leanModal();
   });
