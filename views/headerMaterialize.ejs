@@ -1,0 +1,82 @@
+
+<div class=" row" >
+
+  <div class="col s8 center " >
+    <div class="center z-depth-2 card-content" style="margin-top: 1.5em; margin-left: 7em;">
+      <div class="card">
+        <blockquote style="border-left: 5px solid rgb(38, 107, 156);">
+          <p><br><h5> <%= __('headerTitle1') %> <br> <%= __('headerTitle2') %> </h5></p><br>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="col s2 center  card-content" style="margin-top: 1.3em; margin-left: 4em; ">
+          <img class="z-depth-2" src="/images/logoUcaribe.png" style="width: 20em; border-left: 5px solid rgb(38, 107, 156);">
+    </div>
+
+
+
+    <!--div class="center" style="border-left: 5px solid rgb(38, 107, 156); margin-top: 1.5em; margin-left: 3em; ">
+      <img  src="/images/logoUcaribe.png" class="z-depth-2" style=" width:13em">
+    </div-->
+  </div>
+
+
+    <!--div class="center" style="border-left: 5px solid rgb(38, 107, 156); margin-top: 1.5em; margin-left: 3em; ">
+      <img  src="/images/logoUcaribe.png" class="z-depth-2" style=" width:13em">
+    </div-->
+
+
+</div>
+
+<nav  role="navigation" style=" background-color: rgb(38, 107, 156);">
+  <div class="nav-wrapper container">
+    <ul class="hide-on-med-and-down ">
+      <li >
+          <a href="" ><%= __('start') %></a>
+      </li>
+      <li><a href="/catalogo"><%= __('cat') %></a></li>
+      <li><a href="/"><%= __('search') %></a></li>
+      <li><a href="/proye"><%= __('proy-upcoming') %></a></li>
+      <!-- Dropdown Trigger -->
+      <li class="right col s4" ><a class="dropdown-button " href="#!" data-activates="dropdown1"><%= __('lang') %><i class="material-icons right">arrow_drop_down</i></a></li>
+      </li>
+    </ul>
+
+
+    <ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
+      <li><a href="#">Navbar Link</a></li>
+    </ul>
+    <a href="http://materializecss.com/templates/starter-template/preview.html#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+  </div>
+</nav>
+
+
+<ul id="dropdown1" class="dropdown-content">
+  <li>
+    <a href="/es" id="lang-es" class="valign-wrapper">
+      <div class="col s2" style="float: left;">
+        <img src="/images/es.png" alt="" class="circle responsive-img" style="width: 20px;"> <!-- notice the "circle" class -->
+      </div>
+      <div class="col s10" style="padding-left: 2em" >
+        <span class="black-text">
+          <%= __('es') %>
+        </span>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="/en" id="lang-en" class="valign-wrapper">
+      <div class="col s2" style="float: left;">
+        <img src="/images/en.png" alt="" class="circle responsive-img" style="width: 20px;"> <!-- notice the "circle" class -->
+      </div>
+      <div class="col s10" style="padding-left: 2em" >
+        <span class="black-text">
+          <%= __('en') %>
+        </span>
+      </div>
+    </a>
+  </li>
+</ul>

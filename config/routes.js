@@ -87,7 +87,16 @@ module.exports.routes = {
   },
   '/catalogo':{
     view:'inicio/catalogo'
+  },
+
+  
+  '/contact':{
+    view:'contact'
+  },
+  '/map-site':{
+    view:'mapsite'
   }
+
 
 
   /***************************************************************************

@@ -1,0 +1,77 @@
+
+
+<div class="card">
+ <!--div class="card-image waves-effect waves-block waves-light">
+
+</div-->
+ <div class="card-content">
+   <!--form class="" action="/login" method="post"-->
+     <span class=" grey-text text-darken-4"><%= __('user') %></span>
+     <input id="icon_telephone" type="tel" class="validate">
+
+     <span class=" activator grey-text text-darken-4"><%= __('pass') %></span>
+     <input id="icon_telephone" type="tel" class="validate">
+  <!--/form-->
+   <p>
+      <a class="modal-trigger" href="#modal1" ><%= __('create') %></a>
+      <a class="right" href=""><%= __('sigin') %></a>
+    </p>
+
+ </div>
+</div>
+<br><br>
+
+
+<div id="datepicker"></div>
+
+
+<div id="modal1" class="modal">
+  <form class="" action="/login" method="post">
+    <div class="modal-content">
+      <h5><%= __('create-account') %></h5>
+        <span class="card-title activator grey-text text-darken-4"><%= __('user') %></span>
+        <input name="user" type="text" class="validate" required="true">
+
+        <span class="card-title activator grey-text text-darken-4"><%= __('pass') %></span>
+        <input name="pass" type="password" class="validate" required="true">
+
+        <span class="card-title activator grey-text text-darken-4"><%= __('cn-pass') %></span>
+        <input name="pass" type="password" class="validate" required="true">
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat"><%= __('cancel') %></a>
+      <button class=" modal-action waves-effect waves-green btn-flat" type="submit" name="button"><%= __('save') %></button>
+    </div>
+   </form>
+</div>
+
+<!--div class="container">
+      <div class="row center">
+        <div style="border: 1px solid black; container">
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="icon_prefix" type="text" class="validate">
+                  <label for="icon_prefix">First Name</label>
+                </div>
+              </div>
+
+              <div class="row">  <div class="input-field col s6">
+                  <i class="material-icons prefix">phone</i>
+                  <input id="icon_telephone" type="tel" class="validate">
+                  <label for="icon_telephone">Telephone</label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row center">
+        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
+      </div>
+      <br><br>
+
+    </div-->
