@@ -28,15 +28,25 @@
 
 </div>
 
-
 <nav  role="navigation" style=" background-color: rgb(38, 107, 156);">
   <div class="nav-wrapper container">
     <ul class="hide-on-med-and-down ">
       <li >
           <a href="" >Inicio</a>
-          <a href="">Catalogo</a>
-          <a href="">Busqueda</a>
-          <a href="">Proyectos en puerta</a>
+      </li>
+      <li><a href="">Catalogo</a></li>
+      <li><a href="">Busqueda</a></li>
+      <li><a href="">Proyectos en puerta</a></li>
+      <!-- Dropdown Trigger -->
+      <li class="right col s4" ><a class="dropdown-button " href="#!" data-activates="dropdown1">Lenguaje<i class="material-icons right">arrow_drop_down</i></a></li>
+
+          <!--ul>
+             <li>
+                 <%= __('es') %>
+                <a href=""><img src="/images/es.png" alt="" />
+                </a>
+             </li>
+          </ul-->
       </li>
     </ul>
 
@@ -47,3 +57,31 @@
     <a href="http://materializecss.com/templates/starter-template/preview.html#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
   </div>
 </nav>
+
+
+<ul id="dropdown1" class="dropdown-content">
+  <li>
+    <a href="/es" id="lang-es" class="valign-wrapper">
+      <div class="col s2" style="float: left;">
+        <img src="/images/es.png" alt="" class="circle responsive-img" style="width: 20px;"> <!-- notice the "circle" class -->
+      </div>
+      <div class="col s10" style="padding-left: 2em" >
+        <span class="black-text">
+          <%= __('es') %>
+        </span>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="/en" id="lang-en" class="valign-wrapper">
+      <div class="col s2" style="float: left;">
+        <img src="/images/en.png" alt="" class="circle responsive-img" style="width: 20px;"> <!-- notice the "circle" class -->
+      </div>
+      <div class="col s10" style="padding-left: 2em" >
+        <span class="black-text">
+          <%= __('en') %>
+        </span>
+      </div>
+    </a>
+  </li>
+</ul>

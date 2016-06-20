@@ -33,13 +33,29 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    view: 'index'
+    controller: 'AppController',
+    action: 'index'
   },
   'GET /catalogos/programs':{
     controller: 'CatalogController',
     action: 'listProgram'
+  },
+  'GET /catalogos/users':{
+    controller: 'CatalogController',
+    action: 'listUsers'
+  },
+  'GET /catalogos/typeUsers':{
+    controller: 'CatalogController',
+    action: 'listTypeUsers'
+  },
+  '/en':{
+    controller: 'AppController',
+    action: 'changeEn'
+  },
+  '/es': {
+    controller: 'AppController',
+    action: 'changeEs'
   }
-
   //'/main': {
   //  view: 'main'
   //}
