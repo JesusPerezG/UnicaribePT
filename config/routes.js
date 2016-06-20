@@ -35,6 +35,11 @@ module.exports.routes = {
   '/': {
     view: 'index'
   },
+  'GET /catalogos/programs':{
+    controller: 'CatalogController',
+    action: 'listProgram'
+  }
+
   //'/main': {
   //  view: 'main'
   //}

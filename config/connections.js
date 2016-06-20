@@ -56,14 +56,14 @@ module.exports.connections = {
   * Run: npm install sails-mongo                                             *
   *                                                                          *
   ***************************************************************************/
-   unicaribe: {
+   unicaribedb: {
      adapter: 'sails-mongo',
      host: 'localhost',
      port: 27017,
      user: 'test', //optional
      //password: 'password', //optional
      database: 'UnicaribePT' //optional
-   },
+   }
 
   /***************************************************************************
   *                                                                          *
