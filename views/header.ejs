@@ -1,48 +1,47 @@
-<header>
-  <div class="container">
-    <div class="row">
-      <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <div class="navbar-brand">
-              <a href="index.html"><h1>DCBeI</h1></a>
-            </div>
-          </div>
-          <div class="menu">
-            <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="active"><a href="index.html">Home</a></li>
-              <li role="presentation"><a href="feature.html"><%= __('cat') %></a></li>
-              <li role="presentation"><a href="blog.html"><%= __('search') %></a></li>
-              <li role="presentation"><a href="portfolio.html"><%= __('proy-upcoming') %></a></li>
-              <li role="presentation"><a href="/contact">Contact</a></li>
-              <li class="right" role="presentation">
-                <a href="/es" id="lang-es" class="valign-wrapper">
-                  <div class="col s2" style="float: left;">
-                    <img src="/images/es.png" alt="" class="circle responsive-img" style="width: 20px;"> <!-- notice the "circle" class -->
-                  </div>
-                  <div class="col s10" style="padding-left: 2em" >
-                    <span class="black-text">
-                      <%= __('es') %>
-                    </span>
-                  </div>
-                </a>
-              </li>
-              <li class="right" role="presentation">
-                <a href="/es" id="lang-es" class="valign-wrapper">
-                  <div class="col s2" style="float: left;">
-                    <img src="/images/en.png" alt="" class="circle responsive-img" style="width: 20px;"> <!-- notice the "circle" class -->
-                  </div>
-                  <div class="col s10" style="padding-left: 2em" >
-                    <span class="black-text">
-                      <%= __('en') %>
-                    </span>
-                  </div>
-                </a>
-              </div>
-            </ul>
-          </div>
+<div class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
         </div>
-      </nav>
+
+        <div class="navbar-collapse collapse ">
+            <ul class="nav navbar-nav">
+              <li><a href="/"><%= __('start') %></a></li>
+              <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Catalogo <i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/">Autor</a></li>
+                        <li><a href="/">Titulo</a></li>
+                        <li><a href="/">Asesor</a></li>
+                        <li><a href="/">Programa</a></li>
+                        <!--li class="dropdown-submenu">
+                          <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown">Pages</a>
+                          <ul class="dropdown-menu">
+                              <li><a href="fullwidth.html">Full width</a></li>
+                              <li><a href="right-sidebar.html">Right sidebar</a></li>
+                              <li><a href="left-sidebar.html">Left sidebar</a></li>
+                              <li><a href="comingsoon.html">Coming soon</a></li>
+                              <li><a href="search-result.html">Search result</a></li>
+                              <li><a href="404.html">404</a></li>
+                              <li><a href="register.html">Register</a></li>
+                              <li><a href="login.html">Login</a></li>
+                        </ul-->
+                      </li>
+                  </ul>
+            </li>
+            <li><a href="/search">Busquedas</a></li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Proyectos <i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="blog-rightsidebar.html">Terminados</a></li>
+                        <li><a href="blog-leftsidebar.html">Puerta</a></li>
+                    </ul>
+            </li>
+            <li><a href="/contact">Contactanos</a></li>
+            </ul>
+        </div>
     </div>
-  </div>
-</header>
+</div>

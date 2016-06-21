@@ -64,7 +64,9 @@ module.exports.routes = {
     controller: 'AppController',
     action: 'logout'
   },
-
+  '/search': {
+    view: 'private/proyects/create'
+  },
   // Admin
   '/admin/proyects/create': {
     view: 'private/proyects/create'
@@ -74,7 +76,27 @@ module.exports.routes = {
   },
   '/admin/proyects/edit': {
     view: 'private/proyects/edit'
-  }, // Inicio
+  },
+  '/admin/user/create': {
+    view: 'private/catalogs/users/create'
+  },
+  '/admin/user/list': {
+    view: 'private/catalogs/users/list'
+  },
+  '/admin/program/list': {
+    view: 'inicio/catalogs/programs/list'
+  },
+  '/admin/program/create': {
+    view: 'private/catalogs/programs/create'
+  },
+  '/admin/typeuser/list': {
+    view: 'private/catalogs/typeUsers/list'
+  },
+  '/admin/typeuser/create': {
+    view: 'private/catalogs/typeUsers/create'
+  },
+
+  // Inicio
 
   '/proye':{
     view:'inicio/proye'
@@ -86,10 +108,12 @@ module.exports.routes = {
     view:'inicio/proyext'
   },
   '/catalogo':{
-    view:'inicio/catalogo'
+    view:'catalogo'
+  },
+  '/search':{
+    view:'inicio/search'
   },
 
-  
   '/contact':{
     view:'contact'
   },
