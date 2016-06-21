@@ -56,27 +56,34 @@ module.exports.routes = {
     controller: 'AppController',
     action: 'changeEs'
   },
-  'login': {
-    controller: 'AppController',
-    action: 'login'
+  '/register': {
+    view:"register"
   },
-  'logout': {
+  '/login': {
+    view:"login"
+  },
+  '/logout': {
     controller: 'AppController',
     action: 'logout'
   },
   '/search': {
     view: 'private/proyects/create'
   },
+
+
   // Admin
   '/admin/proyects/create': {
-    view: 'private/proyects/create'
+    view: 'private/proyect/create'
   },
   '/admin/proyects/list': {
-    view: 'private/proyects/list'
+    view: 'private/proyect/list'
   },
   '/admin/proyects/edit': {
-    view: 'private/proyects/edit'
+    view: 'private/proyect/edit'
   },
+
+
+
   '/admin/user/create': {
     view: 'private/catalogs/users/create'
   },
