@@ -59,14 +59,20 @@ module.exports.routes = {
   '/register': {
     view:"register"
   },
-  '/login': {
+  'get /login': {
     view:"login"
   },
+  'post /login': {
+    controller: 'AppController',
+    action: 'login'
+  },
+
   '/logout': {
     controller: 'AppController',
     action: 'logout'
   },
   '/search': {
+
     view: 'private/proyects/create'
   },
 
