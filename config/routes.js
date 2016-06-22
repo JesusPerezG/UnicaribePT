@@ -106,7 +106,7 @@ module.exports.routes = {
   // Inicio
 
   '/proye':{
-    view:'inicio/proye'
+    view:'proye'
   },
   '/proyuni':{
     view:'inicio/proyuni'
