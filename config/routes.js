@@ -120,8 +120,17 @@ module.exports.routes = {
   '/proyext':{
     view:'inicio/proyext'
   },
-  '/catalogo':{
-    view:'catalogo'
+  '/cat-prog':{
+    view:'inicio/cat-prog'
+  },
+  '/cat-titulo':{
+    view:'inicio/cat-titulo'
+  },
+  '/cat-autor':{
+    view:'inicio/cat-autor'
+  },
+  '/cat-asesor':{
+    view:'inicio/cat-asesor'
   },
   '/search':{
     view:'inicio/search'
