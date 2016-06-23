@@ -72,29 +72,27 @@ module.exports.routes = {
     action: 'logout'
   },
   '/search': {
-
     view: 'private/proyects/create'
   },
 
 
   //    ####      Admin    #####
-  'GET /admin/project/create': 'private/project/create',
-  'GET /admin/project/list':   'private/project/list',
-  'GET /admin/project/edit':   'private/project/edit',
+  'GET /admin': 'PrivateAppController.index',
+  'GET /admin/project/create': 'PrivateAppController.createProject',
+  'GET /admin/project/edit': 'PrivateAppController.editProject',
+  'GET /admin/project/list': 'PrivateAppController.listProjects',
 
-  'GET /admin/user/create': 'private/user/create',
-  'GET /admin/user/list':   'private/user/list',
-  'GET /admin/user/edit':   'private/user/edit',
+  'GET /admin/user/create': 'PrivateAppController.createUser',
+  'GET /admin/user/list':   'PrivateAppController.listUsers',
+  'GET /admin/user/edit':   'PrivateAppController.editUser',
 
-  'GET /admin/program/list':   'private/program/list',
-  'GET /admin/program/create': 'private/program/create',
-  'GET /admin/program/edit':   'private/program/edit',
+  'GET /admin/program/list':   'PrivateAppController.listPrograms',
+  'GET /admin/program/create': 'PrivateAppController.createProgram',
+  'GET /admin/program/edit':   'PrivateAppController.editProgram',
 
-
-  'GET /admin/typeuser/create': 'private/typeuser/create',
-  'GET /admin/typeuser/list':   'private/typeuser/list',
-  'GET /admin/typeuser/edit':   'private/typeuser/edit',
-
+  'GET /admin/typeuser/create': 'PrivateAppController.createTypeuser',
+  'GET /admin/typeuser/list':   'PrivateAppController.listTypeusers',
+  'GET /admin/typeuser/edit':   'PrivateAppController.editTypeuser',
 
 
 // ----------------- POST -------------------------

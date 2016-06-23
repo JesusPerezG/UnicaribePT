@@ -1,16 +1,26 @@
 module.exports = {
 
+
+  index:function(req,res){
+    res.view('private/index');
+  },
   createProject:function(req,res){
-    res.view('index');
+    Program.find().exec(function (err,programs){
+      Period.find().exec(function (err,periods){
+        if(err)
+          return res.json(err);
+        res.view('private/project/create', {
+          programs: programs, periods: periods
+        });
+      });
+    });
 	},
 
   listProjects: function(req,res){
-    res.setLocale('en');
-    res.view('index');
+    res.view('private/project/list');
 	},
   editProject: function(req,res){
-    res.setLocale('es');
-    res.view('index');
+    res.view('private/project/edit');
 	},
 
 

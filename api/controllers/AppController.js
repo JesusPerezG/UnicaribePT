@@ -17,7 +17,7 @@ module.exports = {
   login: function(req,res){
     var user = req.param("user");
     var pass = req.param("password");
-    User.findOne({user:user, password: pass}).exec(function (err,user){    
+    User.findOne({user:user, password: pass}).exec(function (err,user){
       if(err)
         return res.json(err);
 
@@ -34,6 +34,8 @@ module.exports = {
   },
 
   logout: function(req,res){
-
-	},
+    req.session.destroy(function(err) {
+         res.redirect('/login');
+    });
+	}
 };

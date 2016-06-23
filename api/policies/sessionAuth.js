@@ -15,5 +15,6 @@ module.exports = function(req, res, next) {
     return next();
   }
   //req.session.languagePreference
-  res.view('index');
+  console.log("Favor de iniciar sesión..");
+  res.redirect('/login');
 };

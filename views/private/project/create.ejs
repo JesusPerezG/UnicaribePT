@@ -16,28 +16,38 @@
 
 <div class="row">
   <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-    <form role="form" class="register-form">
+      <form role="form" class="register-form" action="/project/create" method="post">
     <h2>Crear Proyecto <small> (Interno)</small></h2>
     <hr class="colorgraph">
     <div class="row">
       <div class="form-group">
             <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Titulo" tabindex="2">
       </div>
+
       <div class="form-group">
-          <select class="form-control input-lg" id="select">
+
+        <select class="form-control input-lg" id="select" name="Project[program]">
+          <option value="">Selecciona un programa</option>
+            <% for(var i=0; i<programs.length; i++) { %>
+                    <option value="<%= programs[i].id%>"><%= programs[i].name %></option>
+            <% } %>
+        </select>
+
+        <!--select class="form-control input-lg" id="select">
           <option> Selecciona un programa educativo</option>
           <option>Ingenieria en Telematica</option>
           <option>Ingenieria Indrustrial</option>
           <option>Ingenieria en Logistica</option>
           <option>Ingenieria Ambiental</option>
-        </select>
+        </select-->
+
       </div>
       <div class="form-group">
-          <select class="form-control input-lg" id="select">
-          <option> Periodo</option>
-          <option>Primavera</option>
-          <option>Otoño</option>
-          <option>Invierno</option>
+        <select class="form-control input-lg" id="select" name="Project[period]" required="true">
+            <option value="">Selecciona un periodo</option>
+            <% for(var i=0; i<periods.length; i++) { %>
+                    <option value="<%= periods[i].id%>"><%= periods[i].name %></option>
+            <% } %>
         </select>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-6">
