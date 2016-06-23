@@ -7,12 +7,13 @@
 
 module.exports = {
 
+		createProject: function(req,res){
+		},
+
 		/** PROYECTOS **/
-		editProyect: function(req,res){
+		editProject: function(req,res){
 		},
-		createProyect: function(req,res){
-		},
-		deleteProyect: function(req,res){
+		deleteProject: function(req,res){
 		},
 
 		/** USERS **/
@@ -32,11 +33,11 @@ module.exports = {
 		},
 
 
-		createTypeUser: function(req,res){
+		createTypeuser: function(req,res){
 		},
-		editTypeUser: function(req,res){
+		editTypeuser: function(req,res){
 		},
-		deleteTypeUser: function(req,res){
+		deleteTypeuser: function(req,res){
 		}
 
 

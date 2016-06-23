@@ -77,37 +77,91 @@ module.exports.routes = {
   },
 
 
-  // Admin
-  '/admin/proyects/create': {
-    view: 'private/proyect/create'
-  },
-  '/admin/proyects/list': {
-    view: 'private/proyect/list'
-  },
-  '/admin/proyects/edit': {
-    view: 'private/proyect/edit'
-  },
+  //    ####      Admin    #####
+  'GET /admin/project/create': 'private/project/create',
+  'GET /admin/project/list':   'private/project/list',
+  'GET /admin/project/edit':   'private/project/edit',
+
+  'GET /admin/user/create': 'private/user/create',
+  'GET /admin/user/list':   'private/user/list',
+  'GET /admin/user/edit':   'private/user/edit',
+
+  'GET /admin/program/list':   'private/program/list',
+  'GET /admin/program/create': 'private/program/create',
+  'GET /admin/program/edit':   'private/program/edit',
+
+
+  'GET /admin/typeuser/create': 'private/typeuser/create',
+  'GET /admin/typeuser/list':   'private/typeuser/list',
+  'GET /admin/typeuser/edit':   'private/typeuser/edit',
 
 
 
-  '/admin/user/create': {
-    view: 'private/catalogs/users/create'
-  },
-  '/admin/user/list': {
-    view: 'private/catalogs/users/list'
-  },
-  '/admin/program/list': {
-    view: 'inicio/catalogs/programs/list'
-  },
-  '/admin/program/create': {
-    view: 'private/catalogs/programs/create'
-  },
-  '/admin/typeuser/list': {
-    view: 'private/catalogs/typeUsers/list'
-  },
-  '/admin/typeuser/create': {
-    view: 'private/catalogs/typeUsers/create'
-  },
+// ----------------- POST -------------------------
+
+'POST /project/create': {
+  controller: 'PrivateController',
+  action: 'createProject'
+},
+'POST /project/edit': {
+  controller: 'PrivateController',
+  action: 'editProject'
+},
+'POST /project/delete': {
+  controller: 'PrivateController',
+  action: 'deleteProject'
+},
+
+
+'POST /admin/user/create': {
+  controller: 'PrivateController',
+  action: 'createUser'
+//    view: 'private/catalogs/users/create'
+},
+'POST /admin/user/edit': {
+  controller: 'PrivateController',
+  action: 'editUser'
+  //view: 'private/catalogs/users/list'
+},
+'POST /admin/user/delete': {
+  controller: 'PrivateController',
+  action: 'deleteUser'
+  //view: 'private/catalogs/users/list'
+},
+
+
+'POST /program/create': {
+  controller: 'PrivateController',
+  action: 'createProgram'
+  //view: 'private/catalogs/programs/create'
+},
+'POST /program/edit': {
+  controller: 'PrivateController',
+  action: 'editProgram'
+  //view: 'inicio/catalogs/programs/list'
+},
+'POST /program/delete': {
+  controller: 'PrivateController',
+  action: 'deleteProgram'
+},
+
+
+
+'POST /typeuser/create': {
+  controller: 'PrivateController',
+  action: 'createTypeuser'
+},
+'POST /typeuser/edit': {
+  controller: 'PrivateController',
+  action: 'editTypeuser'
+},
+'POST /typeuser/delete': {
+  controller: 'PrivateController',
+  action: 'deleteTypeuser'
+},
+
+// ---------------- END POST -----------------------
+
 
   // Inicio
 
