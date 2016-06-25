@@ -15,9 +15,9 @@ module.exports = {
 	},
 
   login: function(req,res){
-    var user = req.param("user");
+    var email = req.param("email");
     var pass = req.param("password");
-    User.findOne({user:user, password: pass}).exec(function (err,user){
+    User.findOne({email:email, password: pass}).exec(function (err,user){
       if(err)
         return res.json(err);
 

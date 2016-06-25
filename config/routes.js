@@ -74,10 +74,13 @@ module.exports.routes = {
   '/search': {
     view: 'private/proyects/create'
   },
+  '/admin': {
+    view: 'private/index'
+  },
 
 
   //    ####      Admin    #####
-  'GET /admin': 'PrivateAppController.index',
+  'GET /admin': 'PrivateAppController.createProject',
   'GET /admin/project/create': 'PrivateAppController.createProject',
   'GET /admin/project/edit': 'PrivateAppController.editProject',
   'GET /admin/project/list': 'PrivateAppController.listProjects',
@@ -90,9 +93,13 @@ module.exports.routes = {
   'GET /admin/program/create': 'PrivateAppController.createProgram',
   'GET /admin/program/edit':   'PrivateAppController.editProgram',
 
-  'GET /admin/typeuser/create': 'PrivateAppController.createTypeuser',
+  /*'GET /admin/typeuser/create': 'PrivateAppController.createTypeuser',
   'GET /admin/typeuser/list':   'PrivateAppController.listTypeusers',
-  'GET /admin/typeuser/edit':   'PrivateAppController.editTypeuser',
+  'GET /admin/typeuser/edit':   'PrivateAppController.editTypeuser',*/
+
+  'GET /admin/period/create': 'PrivateAppController.createPeriod',
+  'GET /admin/period/list':   'PrivateAppController.listPeriods',
+  'GET /admin/period/edit':   'PrivateAppController.editPeriod',
 
 
 // ----------------- POST -------------------------
@@ -105,23 +112,23 @@ module.exports.routes = {
   controller: 'PrivateController',
   action: 'editProject'
 },
-'POST /project/delete': {
+'/project/delete': {
   controller: 'PrivateController',
   action: 'deleteProject'
 },
 
 
-'POST /admin/user/create': {
+'POST /user/create': {
   controller: 'PrivateController',
   action: 'createUser'
 //    view: 'private/catalogs/users/create'
 },
-'POST /admin/user/edit': {
+'POST /user/edit': {
   controller: 'PrivateController',
   action: 'editUser'
   //view: 'private/catalogs/users/list'
 },
-'POST /admin/user/delete': {
+'/user/delete': {
   controller: 'PrivateController',
   action: 'deleteUser'
   //view: 'private/catalogs/users/list'
@@ -138,14 +145,25 @@ module.exports.routes = {
   action: 'editProgram'
   //view: 'inicio/catalogs/programs/list'
 },
-'POST /program/delete': {
+'/program/delete': {
   controller: 'PrivateController',
   action: 'deleteProgram'
 },
 
+'POST /period/create': {
+  controller: 'PrivateController',
+  action: 'createPeriod'
+},
+'POST /period/edit': {
+  controller: 'PrivateController',
+  action: 'editPeriod'
+},
+'/period/delete': {
+  controller: 'PrivateController',
+  action: 'deletePeriod'
+},
 
-
-'POST /typeuser/create': {
+/*'POST /typeuser/create': {
   controller: 'PrivateController',
   action: 'createTypeuser'
 },
@@ -153,10 +171,10 @@ module.exports.routes = {
   controller: 'PrivateController',
   action: 'editTypeuser'
 },
-'POST /typeuser/delete': {
+'/typeuser/delete': {
   controller: 'PrivateController',
   action: 'deleteTypeuser'
-},
+},*/
 
 // ---------------- END POST -----------------------
 

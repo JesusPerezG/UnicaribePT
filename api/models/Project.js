@@ -6,13 +6,28 @@
  */
 
 module.exports = {
+  schema: true,
+  autoCreatedAt: false,
+  autoUpdatedAt: false,
+  //connection: 'unicaribedb',
+  tableName: 'project',
 
   attributes: {
+    /*id: {
+        type: 'integer',
+        required: true,
+        autoIncrement: true,
+        primaryKey: true
+    },*/
     title : { type: 'string' },
     asesor : { type: 'string' },
-    program : { type: 'string' },
-    period : { type: 'string' },
-    autores : { type: 'string' },
+    program : { type: 'integer' },
+    period : { type: 'integer' },
+    author1 : { type: 'string' },
+    author2 : { type: 'string' },
+    author3 : { type: 'string' },
+    description: { type: 'string' },
+    descriptionall: { type: 'string' },
     date:  { type: 'date' }
   }
 };

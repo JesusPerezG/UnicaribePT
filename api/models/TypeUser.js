@@ -6,10 +6,20 @@
  */
 
 module.exports = {
+  schema: true,
+  autoCreatedAt: false,
+  autoUpdatedAt: false,
+  tableName: 'TypeUser',
 
   attributes: {
-        type : { type: 'string' },
-        fecha: { type: 'string' },
-        note : { type: 'string' }
+    id: {
+        type: 'integer',
+        required: true,
+        autoIncrement: true,
+        primaryKey: true
+    },
+    type : { type: 'string' },
+    date: { type: 'date' },
+    note : { type: 'string' }
   }
 };

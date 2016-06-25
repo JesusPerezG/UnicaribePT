@@ -6,9 +6,21 @@
  */
 
 module.exports = {
+  schema: true,
+  autoCreatedAt: false,
+  autoUpdatedAt: false,
+  tableName: 'Period',
 
   attributes: {
-    name : { type: 'string' }
+    /*id: {
+        type: 'integer',
+        required: true,
+        autoIncrement: true,
+        primaryKey: true
+    },*/
+    name : { type: 'string' },
+    date:  { type: 'date' }
+
   }
 
   /*nextId:function(req,res){

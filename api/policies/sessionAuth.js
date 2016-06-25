@@ -13,8 +13,6 @@ module.exports = function(req, res, next) {
   // or if this is the last policy, the controller
   if (req.session.authenticated) {
     return next();
-  }
-  //req.session.languagePreference
-  console.log("Favor de iniciar sesión..");
+  }   
   res.redirect('/login');
 };

@@ -47,6 +47,15 @@ module.exports.connections = {
   //   password: 'YOUR_MYSQL_PASSWORD', //optional
   //   database: 'YOUR_MYSQL_DB' //optional
   // },
+  mysqlUnicaribe: {
+    adapter: 'sails-mysql',
+    host: 'localhost',
+    port: 3306,
+    user: 'root',
+    password: '',
+    database: 'UnicaribePT'
+  }
+
 
   /***************************************************************************
   *                                                                          *
@@ -56,14 +65,14 @@ module.exports.connections = {
   * Run: npm install sails-mongo                                             *
   *                                                                          *
   ***************************************************************************/
-   unicaribedb: {
+   /*unicaribedb: {
      adapter: 'sails-mongo',
      host: 'localhost',
      port: 27017,
      user: 'test', //optional
      //password: 'password', //optional
      database: 'UnicaribePT' //optional
-   }
+   }*/
 
   /***************************************************************************
   *                                                                          *

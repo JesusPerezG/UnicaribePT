@@ -4,8 +4,9 @@
     <div class="col-lg-12">
       <ul class="breadcrumb">
         <li><a href="#"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
-        <li><a href="#">Features</a><i class="icon-angle-right"></i></li>
-        <li class="active">Register</li>
+        <li><a href="/admin">Admin</a><i class="icon-angle-right"></i></li>
+        <li><a href="/admin/project/list">Project</a><i class="icon-angle-right"></i></li>
+        <li class="active">Create</li>
       </ul>
     </div>
   </div>
@@ -21,29 +22,23 @@
     <hr class="colorgraph">
     <div class="row">
       <div class="form-group">
-            <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Titulo" tabindex="2">
+            <input type="text" name="Project[title]"  id="title" class="form-control input-lg" placeholder="Titulo" tabindex="2">
       </div>
-
+      <div class="form-group">
+            <input type="text" name="Project[asesor]"  id="asesor" class="form-control input-lg" placeholder="Asesor" tabindex="2">
+      </div>
       <div class="form-group">
 
-        <select class="form-control input-lg" id="select" name="Project[program]">
+        <select class="form-control input-lg" id="program" name="Project[program]">
           <option value="">Selecciona un programa</option>
             <% for(var i=0; i<programs.length; i++) { %>
                     <option value="<%= programs[i].id%>"><%= programs[i].name %></option>
             <% } %>
         </select>
 
-        <!--select class="form-control input-lg" id="select">
-          <option> Selecciona un programa educativo</option>
-          <option>Ingenieria en Telematica</option>
-          <option>Ingenieria Indrustrial</option>
-          <option>Ingenieria en Logistica</option>
-          <option>Ingenieria Ambiental</option>
-        </select-->
-
       </div>
       <div class="form-group">
-        <select class="form-control input-lg" id="select" name="Project[period]" required="true">
+        <select class="form-control input-lg" id="period" name="Project[period]" required="true">
             <option value="">Selecciona un periodo</option>
             <% for(var i=0; i<periods.length; i++) { %>
                     <option value="<%= periods[i].id%>"><%= periods[i].name %></option>
@@ -52,16 +47,22 @@
       </div>
       <div class="col-xs-12 col-sm-6 col-md-6">
         <div class="form-group">
-            <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="Autor 1" tabindex="1">
+            <input type="text" name="Project[author1]" id="author1" class="form-control input-lg" placeholder="Autor 1" tabindex="1">
         </div>
       </div>
         <div class="col-xs-12 col-sm-6 col-md-6">
           <div class="form-group">
-            <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Autor 2" tabindex="2">
+            <input type="text" name="Project[author2]" id="author2" class="form-control input-lg" placeholder="Autor 2" tabindex="2">
           </div>
         </div>
         <div class="form-group">
-          <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Autor 3" tabindex="2">
+          <input type="text" name="Project[author3]" id="author3" class="form-control input-lg" placeholder="Autor 3" tabindex="2">
+        </div>
+        <div class="form-group">
+          <textarea type="text" name="Project[description]" id="description" class="form-control input-lg" placeholder="Short Description" tabindex="2"></textarea>
+        </div>
+        <div class="form-group">
+          <textarea type="text" rows="8" name="Project[descriptionAll]" id="descriptionAll" class="form-control input-lg" placeholder="All Description" tabindex="2"></textarea>
         </div>
 
     <div class="row">
