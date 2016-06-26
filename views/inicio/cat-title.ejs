@@ -1,0 +1,65 @@
+<div class="container-fluid">
+
+
+<div class="col-mod-9 col-md-offset-2">
+ <ul class="pagination pagination-md">
+   <li><a href="/catalogo/title/search?q=A&p=1">A</a></li>
+   <li><a href="/catalogo/title/search?q=B">B</a></li>
+   <li><a href="/catalogo/title/search?q=C">C</a></li>
+   <li><a href="/catalogo/title/search?q=D">D</a></li>
+   <li><a href="/catalogo/title/search?q=E">E</a></li>
+   <li><a href="/catalogo/title/search?q=F">F</a></li>
+   <li><a href="/catalogo/title/search?q=G">G</a></li>
+   <li><a href="/catalogo/title/search?q=H">H</a></li>
+   <li><a href="/catalogo/title/search?q=I">I</a></li>
+   <li><a href="/catalogo/title/search?q=J">J</a></li>
+   <li><a href="/catalogo/title/search?q=K">K</a></li>
+   <li><a href="/catalogo/title/search?q=L">L</a></li>
+   <li><a href="/catalogo/title/search?q=M">M</a></li>
+   <li><a href="/catalogo/title/search?q=N">N</a></li>
+   <li><a href="/catalogo/title/search?q=Ñ">Ñ</a></li>
+   <li><a href="/catalogo/title/search?q=O">O</a></li>
+   <li><a href="/catalogo/title/search?q=P">P</a></li>
+   <li><a href="/catalogo/title/search?q=Q">Q</a></li>
+   <li><a href="/catalogo/title/search?q=R">R</a></li>
+   <li><a href="/catalogo/title/search?q=S">S</a></li>
+   <li><a href="/catalogo/title/search?q=T">T</a></li>
+   <li><a href="/catalogo/title/search?q=U">U</a></li>
+   <li><a href="/catalogo/title/search?q=V">V</a></li>
+   <li><a href="/catalogo/title/search?q=W">W</a></li>
+   <li><a href="/catalogo/title/search?q=X">X</a></li>
+   <li><a href="/catalogo/title/search?q=Y">Y</a></li>
+   <li><a href="/catalogo/title/search?q=Z">Z</a></li>
+   <li><a href="/cat-title">*</a></li>
+ </ul>
+</div>
+<% for(var i=0; i<project.length; i++) { %>
+ <div class="row ">
+   <div class="col-md-6 col-md-offset-3">
+       <div class="panel panel-default">
+           <!-- Default panel contents -->
+           <div class="panel-heading"><h4><%= project[i].title %></h4></div>
+           <div class="panel-body">
+             <ul class="list-group">
+                   <li class="list-group-item"><h5>Autor   <span class="glyphicon glyphicon-user"</span></h5> <%= project[i].author1 %> /  <%= project[i].author2 %> / <%= project.author3 %></li>
+                   <li class="list-group-item"><h5>Asesor    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></h5> <%= project[i].asesor %> </li>
+                   <li class="list-group-item"><h5>Programa Educativo    <span class="glyphicon glyphicon-book" aria-hidden="true"></span></h5><%= project[i].program %></li>
+                   <li class="list-group-item"><%= project[i].date.toISOString() %> </li>
+                   <li class="list-group-item"><a href="your link" class="btn btn-primary"><i class="glyphicon glyphicon-download"></i> Reporte</a></li>
+             </ul>
+         </div>
+       </div>
+   </div>
+ </div>
+<% } %>
+
+<nav>
+ <ul class="pager">
+   <% if(page>1) {%>
+       <li><a href="/catalogo/title/search?q=<%=letter%>&p=<%=page-1%>">Anterior</a></li>
+   <% } %>
+   <% if(count > (page*5)) {%>
+       <li><a href="/catalogo/title/search?q=<%=letter%>&p=<%=parseInt(page)+1%>">Siguiente</a></li>
+   <% } %>
+ </ul>
+</nav>

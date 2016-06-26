@@ -1,3 +1,4 @@
+
 DROP DATABASE UnicaribePT;
 Create database UnicaribePT;
 USE UnicaribePT;
@@ -43,6 +44,14 @@ CREATE TABLE Period(
     DATE DATE,
     PRIMARY KEY (ID)
 );
+commit;
+CREATE TABLE Status(
+	ID INT AUTO_INCREMENT NOT NULL,
+    NAME VARCHAR(50) NOT NULL,    
+    DATE DATE,
+    PRIMARY KEY (ID)
+);
+
 CREATE TABLE Program(
 	ID INT AUTO_INCREMENT NOT NULL,
     NAME VARCHAR(50) NOT NULL,    

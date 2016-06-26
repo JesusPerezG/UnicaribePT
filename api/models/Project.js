@@ -19,15 +19,16 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true
     },*/
-    title : { type: 'string' },
-    asesor : { type: 'string' },
-    program : { type: 'integer' },
-    period : { type: 'integer' },
-    author1 : { type: 'string' },
+    title : { type: 'string', required: true },
+    asesor : { type: 'string', required: true },
+    program : { type: 'integer', required: true },
+    period : { type: 'integer', required: true },
+    author1 : { type: 'string', required: true },
     author2 : { type: 'string' },
     author3 : { type: 'string' },
     description: { type: 'string' },
     descriptionall: { type: 'string' },
-    date:  { type: 'date' }
+    date:  { type: 'date', required: true },
+    status: { type: 'integer', required: true }
   }
 };

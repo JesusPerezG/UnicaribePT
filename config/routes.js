@@ -48,6 +48,47 @@ module.exports.routes = {
     controller: 'CatalogController',
     action: 'listTypeUsers'
   },
+
+// Busquedas por catalogos
+'/cat-author':{
+  controller: 'CatalogController',
+  action:'catAuthor'
+},
+'/catalogo/author/search':{
+  controller: 'CatalogController',
+  action: 'searchAuthor'
+},
+'/cat-asesor':{
+  controller: 'CatalogController',
+  action:'catAsesor'
+},
+'/catalogo/asesor/search':{
+  controller: 'CatalogController',
+  action: 'searchAsesor'
+},
+
+'/cat-prog':{
+  controller: 'CatalogController',
+  action:'catProgram'
+  //view:'inicio/cat-prog'
+},
+'/catalogo/program/search':{
+  controller: 'CatalogController',
+  action: 'searchProgram'
+},
+'/catalogo/status/search':{
+  controller: 'CatalogController',
+  action: 'searchStatus'
+},
+'/cat-title':{
+  controller: 'CatalogController',
+  action:'catTitle'
+},
+'/catalogo/title/search':{
+  controller: 'CatalogController',
+  action: 'searchTitle'
+},
+
   '/en':{
     controller: 'AppController',
     action: 'changeEn'
@@ -190,18 +231,7 @@ module.exports.routes = {
   '/proyext':{
     view:'inicio/proyext'
   },
-  '/cat-prog':{
-    view:'inicio/cat-prog'
-  },
-  '/cat-titulo':{
-    view:'inicio/cat-titulo'
-  },
-  '/cat-autor':{
-    view:'inicio/cat-autor'
-  },
-  '/cat-asesor':{
-    view:'inicio/cat-asesor'
-  },
+
   '/search':{
     view:'inicio/search'
   },
