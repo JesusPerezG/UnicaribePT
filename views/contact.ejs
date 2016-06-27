@@ -1,6 +1,6 @@
 <section id="content">
 <div class="map">
-  <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Kuningan,+Jakarta+Capital+Region,+Indonesia&amp;aq=3&amp;oq=kuningan+&amp;sll=37.0625,-95.677068&amp;sspn=37.410045,86.572266&amp;ie=UTF8&amp;hq=&amp;hnear=Kuningan&amp;t=m&amp;z=14&amp;ll=-6.238824,106.830177&amp;output=embed">
+  <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Universidad,+del+Caribe+Cancun,+Quintana+Roo&amp;aq=3&amp;oq=Universidad+Caribe+&amp;sll=21.2013764,-86.8261043,17z&amp;sspn=21.2013764,-86.8261043,17&amp;ie=UTF8&amp;hq=&amp;hnear=Univerdidad+del+Caribe&amp;t=m&amp;z=14&amp;ll=21.2013714,-86.8239156&amp;output=embed">
   </iframe>
 </div>
 <div class="container">
@@ -8,34 +8,33 @@
     <div class="col-lg-12">
 
   <form role="form" class="register-form">
-    <h2>Contact us <small>get in touch with us by filling form below</small></h2>
+    <h2><%= __('contact') %></small></h2>
     <hr class="colorgraph">
     <div class="row">
       <div class="col-xs-12 col-sm-4 col-md-4">
         <div class="form-group">
-                      <input type="text" name="first_name" id="first_name" class="form-control input-md" placeholder="First Name" tabindex="1">
+                <input type="text" name="first_name" id="first_name" class="form-control input-md" placeholder="<%= __('name') %>" tabindex="1">
         </div>
       </div>
       <div class="col-xs-12 col-sm-4 col-md-4">
         <div class="form-group">
-          <input type="text" name="last_name" id="last_name" class="form-control input-md" placeholder="Last Name" tabindex="2">
+          <input type="text" name="last_name" id="last_name" class="form-control input-md" placeholder="<%= __('last-name') %>" tabindex="2">
         </div>
       </div>
       <div class="col-xs-12 col-sm-4 col-md-4">
         <div class="form-group">
-          <input type="text" name="email" id="email" class="form-control input-md" placeholder="Email" tabindex="2">
+          <input type="text" name="email" id="email" class="form-control input-md" placeholder="<%= __('email') %>" tabindex="2">
         </div>
       </div>
     </div>
     <div class="form-group">
-      <textarea class="form-control" rows="8" placeholder="* Your comment here"></textarea>
+      <textarea class="form-control" rows="8" placeholder="<%= __('commets') %>"></textarea>
     </div>
 
 
     <hr class="colorgraph">
     <div class="row">
-      <div class="col-xs-12 col-md-4"><input type="submit" value="Submit message" class="btn btn-theme btn-block btn-md" tabindex="7"></div>
-      <div class="col-xs-12 col-md-8">* Please fill all required form field, thanks!</div>
+      <div class="col-xs-12 col-md-4"><input type="submit" value="<%= __('send-msg') %>" class="btn btn-theme btn-block btn-md" tabindex="7"></div>
     </div>
   </form>
 

@@ -3,7 +3,9 @@
   <div class="row">
       <div class="col-lg-4">
         <div class="widget">
-          <h4>Contacto</h4>
+          <h4>
+            <a href="/contact"><%= __('contacto') %></a>
+          </h4>
           <address>
           <strong>Universidad del Caribe</strong><br>
            SM. 78, Mza. 1, Lote 1, Esquina Fraccionamiento Tabachines<br>
@@ -16,21 +18,23 @@
       </div>
     <div class="col-lg-4">
       <div class="widget">
-        <h4>Mapa de sitio</h4>
+        <h4><%= __('mapa-sitio') %></h4>
         <ul class="link-list">
-          <li><a href="#">Posgrados</a></li>
-          <li><a href="#">Estudiantes</a></li>
+          <li><a href="http://www.unicaribe.edu.mx/pagina/posgrados"><%= __('posg') %>
+          </a></li>
+          <li><a href="http://www.unicaribe.edu.mx/pagina/estudiantes"><%= __('estudiantes') %></a></li>
         </ul>
       </div>
     </div>
     <div class="col-lg-4">
       <div class="widget">
-        <h4>Portal Unicaribe</h4>
+        <h4><a href="http://www.unicaribe.mx"><%= __('portalUca') %></a>
+        </h4>
         <ul class="link-list">
-          <li><a href="http://unicaribe.mx/sitios/admisiones2016/inicio.html">Admisiones</a></li>
-          <li><a href="http://unicaribe.mx/pagina/oferta-educativa">Oferta educativa</a></li>
-          <li><a href="http://www.unicaribe.mx/pagina/estudiantes?opcion=calendario">Calendario Escolar</a></li>
-          <li><a href="http://www.unicaribe.mx/pagina/portalunicaribe">Sistemas Informaticos</a></li>
+          <li><a href="http://unicaribe.mx/sitios/admisiones2016/inicio.html"><%= __('admisiones') %></a></li>
+          <li><a href="http://unicaribe.mx/pagina/oferta-educativa"><%= __('ofertaEduc') %> </a></li>
+          <li><a href="http://www.unicaribe.mx/pagina/estudiantes?opcion=calendario"><%= __('calendario') %> </a></li>
+          <li><a href="http://www.unicaribe.mx/pagina/portalunicaribe"><%= __('sist-info') %></a></li>
       </div>
     </div>
   </div>
@@ -41,7 +45,7 @@
       <div class="col-lg-6">
         <div class="copyright">
           <p>
-            <span>&copy; Ucaribe 2016 All right reserved</span>
+            <span>&copy; <%= __('derechos-reserv') %></span>
           </p>
         </div>
       </div>

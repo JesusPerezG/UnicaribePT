@@ -33,19 +33,19 @@ module.exports = {
      },
 
     catAuthor: function(req, res){
-       Project.count().exec(function countCB(error, count) {
-     	  	Project.find()
-          .paginate({page: 1, limit: 5})
-          .exec(function(err,projects){
-       			if(err){
-       				return res.json(err);
-       			}
-            console.log("Count projects->"+count);
-            res.view('inicio/cat-author', {
-              project: projects, page:1, letter: "", count: count
+           Project.count().exec(function countCB(error, count) {
+         	  	Project.find()
+              .paginate({page: 1, limit: 5})
+              .exec(function(err,projects){
+           			if(err){
+           				return res.json(err);
+           			}
+                console.log("Count projects->"+count);
+                res.view('inicio/cat-author', {
+                  project: projects, page:1, letter: "", count: count
+                });
+         		  });
             });
-     		  });
-        });
       },
 
 

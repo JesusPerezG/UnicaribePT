@@ -4,8 +4,8 @@
     <div class="col-lg-12">
       <ul class="breadcrumb">
         <li><a href="#"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
-        <li><a href="#">Features</a><i class="icon-angle-right"></i></li>
-        <li class="active">Register</li>
+        <li><a href="#"><%= __('user') %></a><i class="icon-angle-right"></i></li>
+        <li class="active"><%= __('register') %></li>
       </ul>
     </div>
   </div>
@@ -17,17 +17,17 @@
 <div class="row">
   <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
     <form role="form" class="register-form">
-    <h2>Please Sign Up <small>It's free and always will be.</small></h2>
+    <h2><%= __('register') %> </h2>
     <hr class="colorgraph">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-6">
         <div class="form-group">
-                      <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1">
+                      <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="<% __('name') %>" tabindex="1">
         </div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-6">
         <div class="form-group">
-          <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2">
+          <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="<% __('last-name') %>" tabindex="2">
         </div>
       </div>
     </div>

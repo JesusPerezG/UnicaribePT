@@ -5,11 +5,11 @@
       <ul class="breadcrumb">
         <li><a href="#"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
 				<% if(pr==1) {%>
-        		<li><a href="/catalogo/status/search?q=1&p=1">Catalogo</a><i class="icon-angle-right"></i></li>
+        		<li><a href="/catalogo/status/search?q=1&p=1"><%= __('cat') %></a><i class="icon-angle-right"></i></li>
         		<li class="active">Desarrollo</li>
 				<% } else { %>
-						<li><a href="/catalogo/status/search?q=2&p=1">Catalogo</a><i class="icon-angle-right"></i></li>
-        		<li class="active">Terminado</li>
+						<li><a href="/catalogo/status/search?q=2&p=1"><%= __('cat') %></a><i class="icon-angle-right"></i></li>
+        		<li class="active"><%= __('terminado') %></li>
 					<% } %>
       </ul>
     </div>
@@ -22,8 +22,8 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<h4 class="heading">Estatus Proyecto</h4>
-					<a href="/catalogo/status/search?q=1&p=1" class="btn btn-danger btn-md">Desarrollo</a>
-					<a href="/catalogo/status/search?q=2&p=1" class="btn btn-danger btn-md">Terminados</a>
+					<a href="/catalogo/status/search?q=1&p=1" class="btn btn-danger btn-md"><%= __('desarrollo') %></a>
+					<a href="/catalogo/status/search?q=2&p=1" class="btn btn-danger btn-md"><%= __('terminado') %></a>
 
 
 				<div id="grid-container" class="cbp-l-grid-projects col 6 md 6 ">
@@ -37,9 +37,9 @@
 		    									<div class="panel-heading"><h5><%=project[i].title%></h5></div>
 		       										 <div class="panel-body">
 		            									<ul class="list-group">
-		               										 <li class="list-group-item"><h6>Autor  <span class="glyphicon glyphicon-user"</span></h6> <%=project[i].author1%> / <%=project[i].author2%> / <%=project[i].author3%> </li>
-		                									 <li class="list-group-item"><h6>Asesor    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></h6><%=project[i].asesor%> </li>
-		                									<li class="list-group-item"><h6>Programa Educativo    <span class="glyphicon glyphicon-book" aria-hidden="true"></span></h6><%=project[i].program%></li>
+		               										 <li class="list-group-item"><h6><%= __('author') %>  <span class="glyphicon glyphicon-user"</span></h6> <%=project[i].author1%> / <%=project[i].author2%> / <%=project[i].author3%> </li>
+		                									 <li class="list-group-item"><h6><%= __('asesor') %>    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></h6><%=project[i].asesor%> </li>
+		                									<li class="list-group-item"><h6><%= __('program') %>    <span class="glyphicon glyphicon-book" aria-hidden="true"></span></h6><%=project[i].program%></li>
 		                									<li class="list-group-item"><td><%= project[i].date.toISOString() %></td></li>
 		            									</ul>
 		       										 </div>
@@ -50,16 +50,18 @@
 								<% } %>
 					</ul>
 				</div>
+    <% if(count>0) { %>
 				<nav>
 				  <ul class="pager">
 				    <% if(page>1) {%>
-				        <li><a href="/catalogo/status/search?q=<%=pr%>&p=<%=page-1%>">Anterior</a></li>
+				        <li><a href="/catalogo/status/search?q=<%=pr%>&p=<%=page-1%>"><%= __('ant') %></a></li>
 				    <% } %>
 				    <% if(count > (page*8)) {%>
-				        <li><a href="/catalogo/status/search?q=<%=pr%>&p=<%=parseInt(page)+1%>">Siguiente</a></li>
+				        <li><a href="/catalogo/status/search?q=<%=pr%>&p=<%=parseInt(page)+1%>"><%= __('sig') %></a></li>
 				    <% } %>
 				  </ul>
 				</nav>
+      <% } %>
 
 
 				<!--div class="cbp-l-loadMore-button">

@@ -4,15 +4,15 @@
     <div class="col-lg-12">
       <ul class="breadcrumb">
         <li><a href="#"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
-        <li><a href="#">Busqueda</a><i class="icon-angle-right"></i></li>
-        <li class="active">Index</li>
+        <li><a href="#"><%= __('search') %></a><i class="icon-angle-right"></i></li>
+        <li class="active"><%= __('start') %></li>
       </ul>
     </div>
   </div>
 </div>
 </section>
 
-
+<br><br>
   <!-- start slider -->
   <div class="container">
       <form role="form" class="register-form" action="/project/search" method="post">
@@ -26,24 +26,24 @@
             <div class="col-xs-6 col-sm-4 col-md-4">
               <div class="form-group">
                 <select class="form-control input-lg" id="type" name="type" required="true">
-                    <option value="">Selecciona un tipo</option>
-                    <option value="1">Author</option>
-                    <option value="2">Title</option>
-                    <option value="3">Asesor</option>
+                    <option value=""><%= __('type-search') %></option>
+                    <option value="1"><%= __('author') %></option>
+                    <option value="2"><%= __('title') %></option>
+                    <option value="3"><%= __('asesor') %></option>
                 </select>
                 <!--input type="text" name="User[last_name]" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2"-->
               </div>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-4">
               <div class="form-group">
-                <button type="submit" class="btn btn-success btn-lg" class="form-control input-lg">Search</button>
+                <button type="submit" class="btn btn-success btn-lg" class="form-control input-lg"><%= __('search') %></button>
               </div>
             </div>
         </div>
     </form>
 
 </div>
-
+<br><br>
 <% for(var i=0; i<project.length; i++) { %>
   <div class="row ">
     <div class="col-md-6 col-md-offset-3">
@@ -52,15 +52,59 @@
             <div class="panel-heading"><h4><%= project[i].title %></h4></div>
             <div class="panel-body">
               <ul class="list-group">
-                    <li class="list-group-item"><h5>Autor   <span class="glyphicon glyphicon-user"</span></h5> <%= project[i].author1 %> /  <%= project[i].author2 %> / <%= project.author3 %></li>
-                    <li class="list-group-item"><h5>Asesor    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></h5> <%= project[i].asesor %> </li>
-                    <li class="list-group-item"><h5>Programa Educativo    <span class="glyphicon glyphicon-book" aria-hidden="true"></span></h5><%= project[i].program %></li>
+                    <li class="list-group-item"><h5><%= __('author') %>   <span class="glyphicon glyphicon-user"</span></h5> <%= project[i].author1 %> /  <%= project[i].author2 %> / <%= project.author3 %></li>
+                    <li class="list-group-item"><h5><%= __('asesor') %>   <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></h5> <%= project[i].asesor %> </li>
+                    <li class="list-group-item"><h5><%= __('program') %>    <span class="glyphicon glyphicon-book" aria-hidden="true"></span></h5><%= project[i].program %></li>
                     <li class="list-group-item"><%= project[i].date.toISOString() %> </li>
-                    <li class="list-group-item"><a href="your link" class="btn btn-primary"><i class="glyphicon glyphicon-download"></i> Reporte</a></li>
+                    <li class="list-group-item">
+                      <button class="btn btn-primary" data-toggle="modal" data-target=".modal-<%= project[i].id%>"><i class="glyphicon glyphicon-plus"></i> Info</button>
+                    </li>
+                    <!--li class="list-group-item"><a href="your link" class="btn btn-primary"><i class="glyphicon glyphicon-download"></i> Reporte</a></li-->
               </ul>
           </div>
         </div>
     </div>
+    <div class="modal fade modal-<%= project[i].id%>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+              <div class="row">
+                <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                    <form role="form" class="register-form" action="/project/edit" method="post">
+                  <h2><%= __('info-pr') %> </h2>
+                  <hr class="colorgraph">
+                  <div class="row">
+                    <div class="form-group">
+                          <input type="hidden" name="id"  id="id" class="form-control input-lg" placeholder="Programa" tabindex="2" value="<%= project[i].id %>">
+                          <input type="text" name="title"  id="title" class="form-control input-lg" placeholder="Titulo" tabindex="2" value="<%= project[i].title%>">
+                    </div>
+                    <div class="form-group">
+                          <input type="text" name="asesor"  id="asesor" class="form-control input-lg" placeholder="Asesor" tabindex="2" value="<%= project[i].asesor%>">
+                    </div>
+                    </div>
+                      <div class="form-group">
+                          <input type="text" name="author1" id="author1" class="form-control input-lg" placeholder="Autor 1" tabindex="1" value="<%=project[i].author1%>">
+                      </div>
+                        <div class="form-group">
+                          <input type="text" name="author2" id="author2" class="form-control input-lg" placeholder="Autor 2" tabindex="2"  value="<%=project[i].author2%>">
+                        </div>
+                      <div class="form-group">
+                        <input type="text" name="author3" id="author3" class="form-control input-lg" placeholder="Autor 3" tabindex="2"  value="<%=project[i].author3%>">
+                      </div>
+                      <div class="form-group">
+                        <textarea type="text" name="description" id="description" class="form-control input-lg" placeholder="Short Description" tabindex="2"  value="<%=project[i].description %>"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <textarea type="text" rows="8" name="descriptionall" id="descriptionall" class="form-control input-lg" placeholder="All Description" tabindex="2"  value="<%=project[i].descriptionall %>"></textarea>
+                      </div>
+
+                  <hr class="colorgraph">
+                </form>
+              </div>
+              </div>
+              </div>
+        </div>
+      </div>
+
   </div>
 <% } %>
 

@@ -12,18 +12,18 @@
             <ul class="nav navbar-nav">
               <% if (session.authenticated) { %>
                   <li class="left"><a href="/admin">Admin</a></li>
-                  <li class="left"><a href="/logout">Sigout</a></li>
-              <% } else {%>
-                  <li class="left"><a href="/login">Sigin</a></li>
+                  <li class="left"><a href="/logout"><%= __('logout') %></a></li>
+              <% } else { %>
+                  <li class="left"><a href="/login"><%= __('login') %></a></li>
               <% }%>
               <li class="active"><a href="/"><%= __('start') %></a></li>
               <li class="dropdown">
-                    <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Catalogo <i class="fa fa-angle-down"></i></a>
+                    <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false"><%= __('cat') %> <i class="fa fa-angle-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/cat-author">Autor</a></li>
-                        <li><a href="/cat-title">Titulo</a></li>
-                        <li><a href="/cat-asesor">Asesor</a></li>
-                        <li><a href="/cat-prog">Programa</a></li>
+                        <li><a href="/cat-author"><%= __('author') %></a></li>
+                        <li><a href="/cat-title"><%= __('title') %></a></li>
+                        <li><a href="/cat-asesor"><%= __('asesor') %></a></li>
+                        <li><a href="/cat-prog"><%= __('program') %></a></li>
                         <!--li class="dropdown-submenu">
                           <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown">Pages</a>
                           <ul class="dropdown-menu">
@@ -39,14 +39,14 @@
                       </li>
                   </ul>
             </li>
-            <li><a href="/search">Busquedas</a></li>
-            <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Proyectos <i class="fa fa-angle-down"></i></a>
+            <li><a href="/search"><%= __('search') %></a></li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false"><%= __('proyectos') %> <i class="fa fa-angle-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/catalogo/status/search?q=1&p=1">Desarrollo</a></li>
-                        <li><a href="/catalogo/status/search?q=2&p=1">Terminados</a></li>
+                        <li><a href="/catalogo/status/search?q=1&p=1"><%= __('desarrollo') %></a></li>
+                        <li><a href="/catalogo/status/search?q=2&p=1"><%= __('terminados') %></a></li>
                     </ul>
             </li>
-            <li><a href="/contact">Contactanos</a></li>
+            <li><a href="/contact"><%= __('contact') %></a></li>
             </ul>
         </div>
     </div>
