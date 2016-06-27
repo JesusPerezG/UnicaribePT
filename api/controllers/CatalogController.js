@@ -14,6 +14,7 @@ module.exports = {
   			return res.json(programs);
 		  });
    },
+
    listUsers: function(req, res){
  	  	User.find().exec(function(err,user){
    			if(err){
@@ -39,7 +40,7 @@ module.exports = {
        			if(err){
        				return res.json(err);
        			}
-            console.log("Count projects>"+count);
+            console.log("Count projects->"+count);
             res.view('inicio/cat-author', {
               project: projects, page:1, letter: "", count: count
             });
@@ -108,7 +109,7 @@ module.exports = {
        console.log("Busanco projectos por catalogo autor>>>"+req.param("q"));
        //, skip: 10, limit: 5, sort: 'author DESC'
        if (letter){
-         Project.count().exec(function countCB(error, count) {
+         Project.count( {asesor: { 'like': letter.toUpperCase()+'%' }}).exec(function countCB(error, count) {
            Project.find({
              or : [
                      {asesor: { 'like': letter.toUpperCase()+'%' }}
@@ -265,6 +266,101 @@ module.exports = {
           });
         });
     }
-  }
+  },
+  catSearch: function(req, res){
+     console.log("Vista de busqeudas-->");
+      Project.count().exec(function countCB(error, count) {
+         Project.find()
+         .paginate({page: 1, limit: 5})
+         .exec(function(err,projects){
+           if(err){
+             return res.json(err);
+           }
+           console.log("Count projects>"+count);
+           res.view('inicio/search', {
+             project: projects, page: 1, key: "", count: count, type:''
+             //project: projects, page:1, letter: "", count: count
+           });
+         });
+       });
+   },
+
+  search: function(req, res){
+    var page = req.param("p");
+    var key = req.param("key");
+    var type = req.param("type");
+    console.log("Busanco projectos por >>>"+key);
+    //, skip: 10, limit: 5, sort: 'author DESC'
+    if (key){
+
+      switch (type) {
+        case '3':
+        Project.count({asesor: { 'like': '%'+key.toUpperCase()+'%' }}).exec(function countCB(error, count) {
+          Project.find({
+            or : [
+                    {asesor: { 'like': '%'+key.toUpperCase()+'%' }}
+            ], sort: 'asesor ASC'
+          }).paginate({page: page, limit:5}).exec(function (err,projects){ //.paginate({page: 1, limit: 2})
+            if(err)
+              return res.json(err);
+            res.view('inicio/search', {
+              project: projects, page: page, key: key, count: count, type: type
+            });
+          });
+        });
+          break;
+        case '1':
+            Project.count({or : [
+                    {author1: { 'like': key.toUpperCase()+'%' }},
+                    {author2: { 'like': key.toUpperCase()+'%' }},
+                    {author3: { 'like': key.toUpperCase()+'%' }}
+                  ]
+              }).exec(function countCB(error, count) {
+              Project.find({
+                    or : [
+                            {author1: { 'like': key.toUpperCase()+'%' }},
+                            {author2: { 'like': key.toUpperCase()+'%' }},
+                            {author3: { 'like': key.toUpperCase()+'%' }}
+                    ], sort: 'author1 ASC'
+                  }).paginate({page: page, limit:5}).exec(function (err,projects){ //.paginate({page: 1, limit: 2})
+                    if(err)
+                      return res.json(err);
+                    res.view('inicio/search', {
+                      project: projects, page: page, key: key, count: count, type: type
+                    });
+                  });
+                });
+            break;
+            default:
+            Project.count({title: { 'like': '%'+key.toUpperCase()+'%' }}).exec(function countCB(error, count) {
+              Project.find({
+                or : [
+                        {title: { 'like': '%'+key.toUpperCase()+'%' }}
+                ], sort: 'title ASC'
+              }).paginate({page: page, limit:5}).exec(function (err,projects){ //.paginate({page: 1, limit: 2})
+                if(err)
+                  return res.json(err);
+                res.view('inicio/search', {
+                  project: projects, page: page, key: key, count: count, type: type
+                });
+              });
+            });
+      }
+     }else{
+       Project.count().exec(function countCB(error, count) {
+         Project.find()
+           .paginate({page: page, limit: 5})
+           .exec(function(err,projects){
+             if(err){
+               return res.json(err);
+             }
+             res.view('inicio/search', {
+               project: projects, page:page, key: "", count: count, type: ""
+             });
+         });
+       });
+     }
+}
+
 
 };

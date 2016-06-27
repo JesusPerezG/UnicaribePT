@@ -51,21 +51,28 @@
           <% } %>
       </tbody>
     </table>
-    <div class="btn-toolbar">
-        <div class="btn-group">
-          <a href="#" class="btn btn-default">1</a>
-          <a href="#" class="btn btn-default">2</a>
-          <a href="#" class="btn btn-default">3</a>
-          <a href="#" class="btn btn-default">4</a>
-        </div>
-
-        <div class="btn-group">
-          <a href="#" class="btn btn-default">5</a>
-          <a href="#" class="btn btn-default">6</a>
-          <a href="#" class="btn btn-default">7</a>
-        </div>
     </div>
   </div>
 </div>
 </div>
 <!-- Modal -->
+
+<% if(count>0) { %>
+  <nav>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-5">
+          <div id="pagination">
+            <ul class="pager">
+          	 <span class="all">Page <%=page%> of <%=Math.round(count/5)%></span>
+          	 <span class="current"><%=page%></span>
+             <% if(page>1) {%>
+               <a href="/admin/project/list?p=<%=page-1%>">Anterior</a>
+             <% } %>
+             <% if(count > (page*5)) {%>
+          	    <a href="/admin/project/list?p=<%=parseInt(page)+1%>">Siguiente</a>
+              <% } %>
+          </div>
+        </div>
+      </div>
+  </nav>
+<% } %>

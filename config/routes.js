@@ -112,8 +112,18 @@ module.exports.routes = {
     controller: 'AppController',
     action: 'logout'
   },
+
+  '/project/search': {
+    controller: 'CatalogController',
+    action: 'search'
+  },
+  'POST /project/search': {
+    controller: 'CatalogController',
+    action: 'search'
+  },
   '/search': {
-    view: 'private/proyects/create'
+    controller: 'CatalogController',
+    action: 'catSearch'
   },
   '/admin': {
     view: 'private/index'
@@ -232,9 +242,9 @@ module.exports.routes = {
     view:'inicio/proyext'
   },
 
-  '/search':{
+  /*'/search':{
     view:'inicio/search'
-  },
+  },*/
 
   '/contact':{
     view:'contact'

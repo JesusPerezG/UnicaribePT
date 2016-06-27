@@ -17,13 +17,16 @@ module.exports = {
 	},
 
   listProjects: function(req,res){
-    Project.find().exec(function (err,projects){
-      if(err)
-        return res.json(err);
-      res.view('private/project/list', {
-        project: projects
+    var page = req.param("p")? req.param("p"): 1;
+    Project.count().exec(function countCB(error, count) {
+        Project.find().paginate({page: page, limit: 5}).exec(function (err,projects){
+          if(err)
+            return res.json(err);
+          res.view('private/project/list', {
+            project: projects, page: page, count: count
+          });
+        });
       });
-    });
 	},
   editProject: function(req,res){
     var id = req.param("id");
@@ -45,13 +48,16 @@ module.exports = {
     res.view('private/user/create');
   },
   listUsers: function(req,res){
-    User.find().exec(function (err,result){
-      if(err)
-        return res.json(err);
-      res.view('private/user/list', {
-        user: result
-      });
-    });
+    var page = req.param("p")? req.param("p"): 1;
+    User.count().exec(function countCB(error, count) {
+        User.find().paginate({page: page, limit: 5}).exec(function (err,result){
+          if(err)
+            return res.json(err);
+          res.view('private/user/list', {
+            user: result, page: page, count: count
+          });
+        });
+     });
 	},
   editUser: function(req,res){
     var id = req.param("id");
@@ -66,13 +72,16 @@ module.exports = {
 
 
   listPrograms: function(req,res){
-    Program.find().exec(function (err,result){
-      if(err)
-        return res.json(err);
-      res.view('private/program/list', {
-        program: result
+    var page = req.param("p")? req.param("p"): 1;
+    Program.count().exec(function countCB(error, count) {
+        Program.find().paginate({page: page, limit: 5}).exec(function (err,result){
+          if(err)
+            return res.json(err);
+          res.view('private/program/list', {
+            program: result, page: page, count: count
+          });
+        });
       });
-    });
 	},
   createProgram: function(req,res){
     res.view('private/program/create');
@@ -90,14 +99,19 @@ module.exports = {
 
 
   listPeriods: function(req,res){
-    Period.find().exec(function (err,result){
-      if(err)
-        return res.json(err);
-      res.view('private/period/list', {
-        period: result
+    console.log("--- Listando periodos");
+    var page = req.param("p")? req.param("p"): 1;
+      Period.count().exec(function countCB(error, count) {
+        Period.find().paginate({page: page, limit: 5}).exec(function (err,result){
+          if(err)
+            return res.json(err);
+          res.view('private/period/list', {
+            period: result, page: page, count: count
+          });
+        });
       });
-    });
 	},
+
   createPeriod: function(req,res){
     res.view('private/period/create');
 	},

@@ -1,100 +1,98 @@
-
-<div class="row">
-        <div class="section no-pad-bot" id="index-banner">
-          <div class="container">
-           <div class="lefts"><h5>Búsqueda rápida</h5><br>
-           </div>
-           <form action="#">
-           <div class="row">
-                <div class="col s10">
-                    <div class="input-field">
-
-                         <textarea name="busqueda" id=" buscar" cols="4" rows="10" class="z-depth-2"></textarea>
-                         <label for="busqmueda"> Buscar... </label>
-                     </div>
-                </div>
-
-                <div class="col s2">
-                    <br>
-                    <a href="#" class="btn blue">Ir</a>
-                </div>
-                <a href="#" class="right red-text"><h6>Búsqueda avanzada</h6></a>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col s12 center">
-                    <input type="radio" name="ascen" id="radio1">
-                    <label for="radio1">Ascendente</label>
-                    <input type="radio" name="descen" id="radio2">
-                    <label for="radio2">Descendente</label>
-                </div>
-            </div>
-
-            </form>
-
-
-            </div>
-
-            </div>
+<section id="inner-headline">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <ul class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
+        <li><a href="#">Busqueda</a><i class="icon-angle-right"></i></li>
+        <li class="active">Index</li>
+      </ul>
+    </div>
+  </div>
 </div>
-<div class="row">
-  <div class="col s12 center-align">
-<br>
-        <div class="card blue-grey lighten-5">
-             <br><h3>Resultados de la búsqueda</h3>
-             <div class="card-content">
-                 <div class="row">
-                    <div class="col s12">
+</section>
 
-                    <div class="col s6">
-                        <ul id="resultado1" class="left-align">
-                            <li>Título: </li>
-                            <li>Autor: </li>
-                            <li>Fecha: </li>
-                            <li>Programa educativo: </li>
-                            <li>Descripción</li>
-                        </ul>
-                        <br>
-                        <ul id="resultado2" class="left-align">
-                            <li>Título: </li>
-                            <li>Autor: </li>
-                            <li>Fecha: </li>
-                            <li>Programa educativo: </li>
-                            <li>Descripción</li>
-                        </ul>
-                    </div>
 
-                    <div class="col s6 "></div>
-                        <ul id="resultado3" class="left-align">
-                            <li>Título: </li>
-                            <li>Autor: </li>
-                            <li>Fecha: </li>
-                            <li>Programa educativo: </li>
-                            <li>Descripción</li>
-                        </ul>
-                        <br>
-                        <ul id="resultado4" class="left-align">
-                            <li>Título: </li>
-                            <li>Autor: </li>
-                            <li>Fecha: </li>
-                            <li>Programa educativo: </li>
-                            <li>Descripción</li>
-                        </ul>
-                    </div>
-                </div>
+  <!-- start slider -->
+  <div class="container">
+      <form role="form" class="register-form" action="/project/search" method="post">
+          <div class="col-mod-9 col-md-offset-2">
+            <!-- Split button -->
+            <div class="col-xs-6 col-sm-4 col-md-4">
+              <div class="form-group">
+                <input type="text" name="key" id="key" class="form-control input-lg" placeholder="Search..." tabindex="2" required="true">
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-4">
+              <div class="form-group">
+                <select class="form-control input-lg" id="type" name="type" required="true">
+                    <option value="">Selecciona un tipo</option>
+                    <option value="1">Author</option>
+                    <option value="2">Title</option>
+                    <option value="3">Asesor</option>
+                </select>
+                <!--input type="text" name="User[last_name]" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2"-->
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-4">
+              <div class="form-group">
+                <button type="submit" class="btn btn-success btn-lg" class="form-control input-lg">Search</button>
+              </div>
             </div>
         </div>
-        <ul class="pagination center">
-    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-    <li class="active"><a href="#!">1</a></li>
-    <li class="waves-effect"><a href="#!">2</a></li>
-    <li class="waves-effect"><a href="#!">3</a></li>
-    <li class="waves-effect"><a href="#!">4</a></li>
-    <li class="waves-effect"><a href="#!">5</a></li>
-    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-  </ul>
+    </form>
+
 </div>
 
+<% for(var i=0; i<project.length; i++) { %>
+  <div class="row ">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading"><h4><%= project[i].title %></h4></div>
+            <div class="panel-body">
+              <ul class="list-group">
+                    <li class="list-group-item"><h5>Autor   <span class="glyphicon glyphicon-user"</span></h5> <%= project[i].author1 %> /  <%= project[i].author2 %> / <%= project.author3 %></li>
+                    <li class="list-group-item"><h5>Asesor    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></h5> <%= project[i].asesor %> </li>
+                    <li class="list-group-item"><h5>Programa Educativo    <span class="glyphicon glyphicon-book" aria-hidden="true"></span></h5><%= project[i].program %></li>
+                    <li class="list-group-item"><%= project[i].date.toISOString() %> </li>
+                    <li class="list-group-item"><a href="your link" class="btn btn-primary"><i class="glyphicon glyphicon-download"></i> Reporte</a></li>
+              </ul>
+          </div>
+        </div>
     </div>
-</div>
+  </div>
+<% } %>
+
+<!--nav>
+  <div class="col-md-4 col-md-offset-3">
+      <ul class="pager">
+        <% if(page>1) {%>
+            <li><a href="/project/search?q=<%=key%>&p=<%=page-1%>&type=<%=type%>">Anterior</a></li>
+        <% } %>
+        <% if(count > (page*5)) {%>
+            <li><a href="/project/search?q=<%=key%>&p=<%=parseInt(page)+1%>&type=<%=type%>">Siguiente</a></li>
+        <% } %>
+      </ul>
+    </div>
+</nav-->
+
+<% if(count>0) {%>
+  <nav>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-5">
+        <div id="pagination">
+          <ul class="pager">
+        	 <span class="all">Page <%=page%> of <%=Math.round(count/5)%></span>
+        	 <span class="current"><%=page%></span>
+           <% if(page>1) {%>
+             <a href="/project/search?q=<%=key%>&p=<%=page-1%>&type=<%=type%>">Anterior</a>
+           <% } %>
+           <% if(count > (page*5)) {%>
+        	    <a href="/project/search?q=<%=key%>&p=<%=parseInt(page)+1%>&type=<%=type%>">Siguiente</a>
+            <% } %>
+        </div>
+      </div>
+    </div>
+  </nav>
+<% } %>

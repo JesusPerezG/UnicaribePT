@@ -11,6 +11,18 @@
     });
 
     $(".dropdown-button").dropdown();
-    
-    $('.modal-trigger').leanModal();
+
+    $('.modal-trigger').leanModal()
+    $(".dropdown-button").dropdown();
+
   });
+
+  
+  /*function getNextSequenceValue(sequenceName){
+   var sequenceDocument = db.sequence.findAndModify({
+   query:{_id: sequenceName },
+   update: {$inc:{sequence_value:1}},
+    new:true
+    });
+   return sequenceDocument.sequence_value;
+ }*/
