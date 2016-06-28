@@ -97,9 +97,7 @@ module.exports.routes = {
     controller: 'AppController',
     action: 'changeEs'
   },
-  '/register': {
-    view:"register"
-  },
+
   'get /login': {
     view:"login"
   },
@@ -129,7 +127,7 @@ module.exports.routes = {
     view: 'private/index'
   },
 
-
+  //'GET /admin': 'PrivateAppController.index',
   //    ####      Admin    #####
   'GET /admin': 'PrivateAppController.createProject',
   'GET /admin/project/create': 'PrivateAppController.createProject',
@@ -143,6 +141,7 @@ module.exports.routes = {
   'GET /admin/program/list':   'PrivateAppController.listPrograms',
   'GET /admin/program/create': 'PrivateAppController.createProgram',
   'GET /admin/program/edit':   'PrivateAppController.editProgram',
+  'GET /register': 'PrivateAppController.createUser',
 
   /*'GET /admin/typeuser/create': 'PrivateAppController.createTypeuser',
   'GET /admin/typeuser/list':   'PrivateAppController.listTypeusers',

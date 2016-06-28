@@ -2,15 +2,18 @@ module.exports = {
 
   index:function(req,res){
     res.view('index');
+    req.session.lang = "es";
 	},
 
   changeEn: function(req,res){
-    res.setLocale('en');
+    //res.setLocale('en');
+    req.session.lang = "en";
     res.view('index');
 	},
 
   changeEs: function(req,res){
-    res.setLocale('es');
+    //res.setLocale('es');
+    req.session.lang = "es";
     res.view('index');
 	},
 
@@ -34,6 +37,7 @@ module.exports = {
   },
 
   logout: function(req,res){
+    req.session.authenticated = false;
     req.session.destroy(function(err) {
          res.redirect('/login');
     });

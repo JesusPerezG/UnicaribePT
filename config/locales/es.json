@@ -33,7 +33,7 @@
   "search":"Búsquedas",
   "desarrollo": "Desarrollo",
   "terminado": "Terminado",
-  "contact": "Contactanos",
+  "contact": "Contáctanos",
   "contacto": "Contacto",
   "author": "Autor",
   "program": "Programa Educativo",
@@ -71,7 +71,8 @@
   "type-user": "Tipo Usuario",
   "type-search": "Selecciona un tipo de busqueda",
   "comments":"Tus Comentarios aquí",
-  "send-msg": "Enviar Mensaje"
+  "send-msg": "Enviar Mensaje",
+  "categorias": "Categorías"
 
 
 }

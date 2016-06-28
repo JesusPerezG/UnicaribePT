@@ -31,7 +31,9 @@ module.exports.policies = {
  },
  PrivateAppController: {
     '*': 'sessionAuth'
- }
+ }/*,
+'*': 'localize'*/
+
 
 
 

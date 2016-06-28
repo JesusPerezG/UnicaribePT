@@ -7,7 +7,7 @@
 
 module.exports = {
   schema: true,
-  autoCreatedAt: false,
+  autoCreatedAt: true,
   autoUpdatedAt: false,
   //connection: 'unicaribedb',
   tableName: 'project',

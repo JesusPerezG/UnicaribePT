@@ -18,7 +18,7 @@
 <div class="row">
   <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
       <form role="form" class="register-form" action="/project/create" method="post">
-    <h2><%= __('create')%> <%= __('project') %> </h2>
+    <h2><%= __('create')%> <%= __('proyecto') %> </h2>
     <hr class="colorgraph">
     <div class="row">
       <div class="form-group">
@@ -30,7 +30,7 @@
       <div class="form-group">
 
         <select class="form-control input-lg" id="program" name="Project[program]">
-          <option value=""><%= __('select-pro') %></option>
+          <option value="">Selecciona un programa</option>
             <% for(var i=0; i<programs.length; i++) { %>
                     <option value="<%= programs[i].id%>"><%= programs[i].name %></option>
             <% } %>
@@ -39,7 +39,7 @@
       </div>
       <div class="form-group">
         <select class="form-control input-lg" id="period" name="Project[period]" required="true">
-            <option value=""><% __('select-pe') %></option>
+            <option value="">Selecciona un periodo</option>
             <% for(var i=0; i<periods.length; i++) { %>
                     <option value="<%= periods[i].id%>"><%= periods[i].name %></option>
             <% } %>
@@ -47,29 +47,29 @@
       </div>
       <div class="form-group">
         <select class="form-control input-lg" id="status" name="Project[status]" required="true">
-            <option value=""><% __('select-status') %></option>
-                    <option value="1"><% __('desarrollo') %></option>
-                    <option value="2"><% __('terminado') %></option>
+            <option value="">Selecciona un estatus</option>
+                    <option value="1">Desarrollo</option>
+                    <option value="2">Terminado</option>
         </select>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-6">
         <div class="form-group">
-            <input type="text" name="Project[author1]" id="author1" class="form-control input-lg" placeholder="<% __('autor-1') %>" tabindex="1">
+            <input type="text" name="Project[author1]" id="author1" class="form-control input-lg" placeholder="Autor 1" tabindex="1">
         </div>
       </div>
         <div class="col-xs-12 col-sm-6 col-md-6">
           <div class="form-group">
-            <input type="text" name="Project[author2]" id="author2" class="form-control input-lg" placeholder="<% __('autor-2') %>" tabindex="2">
+            <input type="text" name="Project[author2]" id="author2" class="form-control input-lg" placeholder="Autor 2 " tabindex="2">
           </div>
         </div>
         <div class="form-group">
-          <input type="text" name="Project[author3]" id="author3" class="form-control input-lg" placeholder="<% __('autor-3') %>" tabindex="2">
+          <input type="text" name="Project[author3]" id="author3" class="form-control input-lg" placeholder="Autor 3" tabindex="2">
         </div>
         <div class="form-group">
-          <textarea type="text" name="Project[description]" id="description" class="form-control input-lg" placeholder="<% __('short-desc') %>" tabindex="2"></textarea>
+          <textarea type="text" name="Project[description]" id="description" class="form-control input-lg" placeholder="Descripción corta" tabindex="2"></textarea>
         </div>
         <div class="form-group">
-          <textarea type="text" rows="8" name="Project[descriptionAll]" id="descriptionAll" class="form-control input-lg" placeholder="<% __('all-desc') %>" tabindex="2"></textarea>
+          <textarea type="text" rows="8" name="Project[descriptionall]" id="descriptionall" class="form-control input-lg" placeholder="Toda la descripción" tabindex="2"></textarea>
         </div>
 
     <div class="row">

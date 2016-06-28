@@ -13,8 +13,8 @@
       <ul class="breadcrumb">
         <li><a href="#"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
         <li><a href="/admin">Admin</a><i class="icon-angle-right"></i></li>
-        <li><a href="/admin/project/list"><% __('project') %></a><i class="icon-angle-right"></i></li>
-        <li class="active"><% __('create') %></li>
+        <li><a href="/admin/project/list">Proyecto</a><i class="icon-angle-right"></i></li>
+        <li class="active">Crear</li>
       </ul>
     </div>
   </div>
@@ -26,20 +26,20 @@
 <div class="row">
   <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
       <form role="form" class="register-form" action="/project/edit" method="post">
-    <h2><% __('edit') %> <% __('project') %></h2>
+    <h2>Editar Proyecto</h2>
     <hr class="colorgraph">
     <div class="row">
       <div class="form-group">
             <input type="hidden" name="Project[id]"  id="id" class="form-control input-lg" placeholder="Programa" tabindex="2" value="<%= project.id %>">
-            <input type="text" name="Project[title]"  id="title" class="form-control input-lg" placeholder="<% __('title') %>" tabindex="2" value="<%= project.title%>">
+            <input type="text" name="Project[title]"  id="title" class="form-control input-lg" placeholder="Título" tabindex="2" value="<%= project.title%>">
       </div>
       <div class="form-group">
-            <input type="text" name="Project[asesor]"  id="asesor" class="form-control input-lg" placeholder="<% __('asesor') %>" tabindex="2" value="<%= project.asesor%>">
+            <input type="text" name="Project[asesor]"  id="asesor" class="form-control input-lg" placeholder="Asesor" tabindex="2" value="<%= project.asesor%>">
       </div>
       <div class="form-group">
 
         <select class="form-control input-lg" id="program" name="Project[program]">
-          <option value=""><% __('select-pro') %></option>
+          <option value="">Seleccione un programa</option>
             <% for(var i=0; i<programs.length; i++) { %>
                   <% if (programs[i].id == project.program) { %>
                         <option selected="selected" value="<%= programs[i].id%>"><%= programs[i].name %></option>
@@ -52,7 +52,7 @@
       </div>
       <div class="form-group">
         <select class="form-control input-lg" id="period" name="Project[period]" required="true">
-            <option value=""><% __('select-pe') %></option>
+            <option value="">Seleccione un periodo</option>
             <% for(var i=0; i<periods.length; i++) { %>
               <% if (periods[i].id == project.period) { %>
                     <option selected="selected" value="<%= periods[i].id%>"><%= periods[i].name %></option>
@@ -64,38 +64,40 @@
       </div>
       <div class="form-group">
         <select class="form-control input-lg" id="status" name="Project[status]" required="true">
-                <option value=""><% __('select-status') %></option>
+                <option value="">Selecciona un Estatus</option>
                 <% if (1 == project.status) { %>
-                  <option selected="selected" value="1"><% __('desarrollo') %></option>
-                  <option value="2"><% __('terminado') %></option>
+                  <option selected="selected" value="1">Desarrollo</option>
+                  <option value="2">Terminado</option>
                 <%} else if(2 == project.status){ %>
-                    <option  value="1"><% __('desarrollo') %></option>
-                    <option selected="selected" value="2"><% __('terminado  ') %></option>
+                    <option  value="1">Desarrollo</option>
+                    <option selected="selected" value="2">Terminado</option>
                 <% } else {%>
-                    <option value="1"><% __('desarrollo') %></option>
-                    <option value="2"><% __('terminado') %></option>
+                    <option value="1">Desarrollo</option>
+                    <option value="2">Terminado</option>
                 <% } %>
 
         </select>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-6">
         <div class="form-group">
-            <input type="text" name="Project[author1]" id="author1" class="form-control input-lg" placeholder="<% __('author-1') %>" tabindex="1" value="<%=project.author1%>">
+            <input type="text" name="Project[author1]" id="author1" class="form-control input-lg" placeholder="Autor 1" tabindex="1" value="<%= project.author1 %>">
         </div>
       </div>
         <div class="col-xs-12 col-sm-6 col-md-6">
           <div class="form-group">
-            <input type="text" name="Project[author2]" id="author2" class="form-control input-lg" placeholder="<% __('author-2') %>" tabindex="2"  value="<%=project.author2%>">
+            <input type="text" name="Project[author2]" id="author2" class="form-control input-lg" placeholder="Autor 2" tabindex="2"  value="<%=project.author2%>">
           </div>
         </div>
         <div class="form-group">
-          <input type="text" name="Project[author3]" id="author3" class="form-control input-lg" placeholder="<% __('author-3') %>" tabindex="2"  value="<%=project.author3%>">
+          <input type="text" name="Project[author3]" id="author3" class="form-control input-lg" placeholder="Autor 3" tabindex="2"  value="<%=project.author3%>">
         </div>
         <div class="form-group">
-          <textarea type="text" name="Project[description]" id="description" class="form-control input-lg" placeholder="<% __('short-desc') %>" tabindex="2"  value="<%=project.description %>"></textarea>
+          <i><%= project.description %></i><br><br>
+          <textarea type="text" name="Project[description]" id="description" class="form-control input-lg" placeholder="Descripción corta" tabindex="2"  value=""></textarea>
         </div>
         <div class="form-group">
-          <textarea type="text" rows="8" name="Project[descriptionall]" id="descriptionall" class="form-control input-lg" placeholder="<% __('all-desc') %>" tabindex="2"  value="<%=project.descriptionall %>"></textarea>
+          <i><%= project.descriptionall %></i><br><br>
+          <textarea type="text" rows="8" name="Project[descriptionall]" id="descriptionall" class="form-control input-lg" placeholder="Toda la descripción" tabindex="2"  value=""></textarea>
         </div>
 
     <div class="row">
@@ -106,7 +108,7 @@
 
     <hr class="colorgraph">
     <div class="row">
-      <div class="col-xs-12 col-md-6"><input type="submit" value="<% __('save') %>" class="btn btn-theme btn-block btn-lg" tabindex="7"></div>
+      <div class="col-xs-12 col-md-6"><input type="submit" value="Guardar" class="btn btn-theme btn-block btn-lg" tabindex="7"></div>
     </div>
   </form>
 </div>

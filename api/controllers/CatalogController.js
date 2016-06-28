@@ -88,13 +88,10 @@ module.exports = {
 
      catAsesor: function(req, res){
        Project.count().exec(function countCB(error, count) {
-     	  	Project.find()
-          .paginate({page: 1, limit: 5})
-          .exec(function(err,projects){
+     	  	Project.find().paginate({page: 1, limit: 5}).exec(function(err,projects){
        			if(err){
        				return res.json(err);
        			}
-            console.log("Count projects>"+count);
             res.view('inicio/cat-asesor', {
               project: projects, page:1, letter: "", count: count
             });
@@ -278,7 +275,7 @@ module.exports = {
            }
            console.log("Count projects>"+count);
            res.view('inicio/search', {
-             project: projects, page: 1, key: "", count: count, type:''
+             project: projects, page: 1, key: "", count: count, type: ''
              //project: projects, page:1, letter: "", count: count
            });
          });

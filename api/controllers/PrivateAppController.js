@@ -4,6 +4,7 @@ module.exports = {
   index:function(req,res){
     res.view('private/index');
   },
+
   createProject:function(req,res){
     Program.find().exec(function (err,programs){
       Period.find().exec(function (err,periods){
@@ -48,11 +49,13 @@ module.exports = {
     res.view('private/user/create');
   },
   listUsers: function(req,res){
+    console.log("List Users---->");
     var page = req.param("p")? req.param("p"): 1;
     User.count().exec(function countCB(error, count) {
         User.find().paginate({page: page, limit: 5}).exec(function (err,result){
           if(err)
             return res.json(err);
+          console.log("List Users--res.view-->"+count+result);
           res.view('private/user/list', {
             user: result, page: page, count: count
           });

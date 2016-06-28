@@ -13,7 +13,7 @@ module.exports = {
 			//Equipo.query('select max()SELECT MAX(ID)+1 AS ID FROM UC_EQUIPO', function(err, nextId) {
 				Project.create({title: project.title, asesor: project.asesor, program: project.program,
 							period: project.period, author1: project.author1, author2: project.author2,
-							author3: project.author3, description: project.description, descriptionAll: project.descriptionAll, date: new Date(), status: project.status
+							author3: project.author3, description: project.description, descriptionall: project.descriptionall, date: new Date(), status: project.status
 				 }).exec(function (err,project){
 						if(err)
 							res.json(err);
@@ -26,8 +26,7 @@ module.exports = {
 
 		/** PROYECTOS **/
 		editProject: function(req,res){
-			var project = req.param("Project");
-			console.log("projectproject--->"+project.id + "-"+project.descriptionall);
+			var project = req.param("Project");			
 			Project.update({ id : project.id} ,{id : project.id,
 						title: project.title, asesor: project.asesor, program: project.program,
 						period: project.period, author1: project.author1, author2: project.author2,

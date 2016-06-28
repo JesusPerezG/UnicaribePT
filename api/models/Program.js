@@ -2,7 +2,7 @@
 
 module.exports = {
   schema: true,
-  autoCreatedAt: false,
+  autoCreatedAt: true,
   autoUpdatedAt: false,
   tableName: 'Program',
 

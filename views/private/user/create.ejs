@@ -5,8 +5,8 @@
       <ul class="breadcrumb">
         <li><a href="#"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
         <li><a href="/admin">Admin</a><i class="icon-angle-right"></i></li>
-        <li><a href="/admin/user/list"><% __('user') %></a><i class="icon-angle-right"></i></li>
-        <li class="/admin/user/create"><% __('create') %></li>
+        <li><a href="/admin/user/list"> Usuario </a><i class="icon-angle-right"></i></li>
+        <li class="/admin/user/create">Crear </li>
       </ul>
     </div>
   </div>
@@ -18,39 +18,39 @@
 <div class="row">
   <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
     <form role="form" class="register-form" action="/user/create" method="post">
-    <h2><% __('create') %> <% __('user') %></h2>
+    <h2>Crear usuario</h2>
     <hr class="colorgraph">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-6">
         <div class="form-group">
-              <input type="text" name="User[first_name]" id="first_name" class="form-control input-lg" placeholder="<% __('name') %>" tabindex="1">
+              <input type="text" name="User[first_name]" id="first_name" class="form-control input-lg" placeholder="Nombre" tabindex="1">
         </div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-6">
         <div class="form-group">
-          <input type="text" name="User[last_name]" id="last_name" class="form-control input-lg" placeholder="<% __('last-name') %>" tabindex="2">
+          <input type="text" name="User[last_name]" id="last_name" class="form-control input-lg" placeholder="Apellido" tabindex="2">
         </div>
       </div>
     </div>
     <div class="form-group">
-      <input type="email" name="User[email]" id="email" class="form-control input-lg" placeholder="<% __('email') %>" tabindex="4">
+      <input type="email" name="User[email]" id="email" class="form-control input-lg" placeholder="Correo" tabindex="4">
     </div>
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-6">
         <div class="form-group">
-          <input type="password" name="User[password]" id="password" class="form-control input-lg" placeholder="<% __('pass') %>" tabindex="5">
+          <input type="password" name="User[password]" id="password" class="form-control input-lg" placeholder="Contraseña" tabindex="5">
         </div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-6">
         <div class="form-group">
-          <input type="password" name="User[password_confirmation]" id="password_confirmation" class="form-control input-lg" placeholder="<% __('cn-pass') %>" tabindex="6">
+          <input type="password" name="User[password_confirmation]" id="password_confirmation" class="form-control input-lg" placeholder="Confirmar contraseña" tabindex="6">
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-xs-4 col-sm-3 col-md-3">
         <span class="button-checkbox">
-          <button type="button" class="btn" data-color="info" tabindex="7"><% __('accept') %></button>
+          <button type="button" class="btn" data-color="info" tabindex="7">Acepto</button>
                       <input type="checkbox" name="t_and_c" id="t_and_c" class="hidden" value="1">
         </span>
       </div>
@@ -59,7 +59,7 @@
     <hr class="colorgraph">
     <div class="row">
       <div class="col-xs-12 col-md-6"><input type="submit" value="Register" class="btn btn-theme btn-block btn-lg" tabindex="7"></div>
-      <div class="col-xs-12 col-md-6"><% __('have-account') %> <a href="/login"><% __('login') %></a></div>
+      <div class="col-xs-12 col-md-6">Tienes una cuenta<a href="/login">  Log in</a></div>
     </div>
   </form>
 </div>

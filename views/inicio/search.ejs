@@ -20,7 +20,7 @@
             <!-- Split button -->
             <div class="col-xs-6 col-sm-4 col-md-4">
               <div class="form-group">
-                <input type="text" name="key" id="key" class="form-control input-lg" placeholder="Search..." tabindex="2" required="true">
+                <input type="text" name="key" id="key" class="form-control input-lg" placeholder="Buscar..." tabindex="2" required="true">
               </div>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-4">
@@ -91,10 +91,12 @@
                         <input type="text" name="author3" id="author3" class="form-control input-lg" placeholder="Autor 3" tabindex="2"  value="<%=project[i].author3%>">
                       </div>
                       <div class="form-group">
-                        <textarea type="text" name="description" id="description" class="form-control input-lg" placeholder="Short Description" tabindex="2"  value="<%=project[i].description %>"></textarea>
+                        <p><%=project[i].description %></p>
+                        <!--textarea type="text" name="description" id="description" class="form-control input-lg" placeholder="Short Description" tabindex="2"  value="<%=project[i].description %>"></textarea-->
                       </div>
                       <div class="form-group">
-                        <textarea type="text" rows="8" name="descriptionall" id="descriptionall" class="form-control input-lg" placeholder="All Description" tabindex="2"  value="<%=project[i].descriptionall %>"></textarea>
+                          <p><%=project[i].descriptionall %></p>
+                        <!--textarea type="text" rows="8" name="descriptionall" id="descriptionall" class="form-control input-lg" placeholder="All Description" tabindex="2"  value="<%=project[i].descriptionall %>"></textarea-->
                       </div>
 
                   <hr class="colorgraph">
@@ -108,20 +110,8 @@
   </div>
 <% } %>
 
-<!--nav>
-  <div class="col-md-4 col-md-offset-3">
-      <ul class="pager">
-        <% if(page>1) {%>
-            <li><a href="/project/search?q=<%=key%>&p=<%=page-1%>&type=<%=type%>">Anterior</a></li>
-        <% } %>
-        <% if(count > (page*5)) {%>
-            <li><a href="/project/search?q=<%=key%>&p=<%=parseInt(page)+1%>&type=<%=type%>">Siguiente</a></li>
-        <% } %>
-      </ul>
-    </div>
-</nav-->
-
-<% if(count>0) {%>
+<%= count %>
+<% if(Math.round(count/5)>0) {%>
   <nav>
   <div class="row">
     <div class="col-md-4 col-md-offset-5">
